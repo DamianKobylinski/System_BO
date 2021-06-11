@@ -49,6 +49,21 @@
         </li>
       </ol>
     </section>
+    <!-- Newsletter Section -->
+    <section id="newsletter">
+      <div class="register-info-wrapper">
+        <div class="register-info">
+          <h1>Zainteresowany?</h1>
+          <h2>Poznaj nasz projekt</h2>
+          <h3>
+            Dokonaj rejestracji <br>
+            Wypełnij formularz otrzymasz więcej informacji
+          </h3>
+          <div class="circle"></div>
+        </div>
+      </div>
+
+    </section>
   </div>
 </template>
 
@@ -71,8 +86,10 @@ body{
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
+
 /* App */
 #app {
+  // Landing Section
   #landing{
     width: 100%;
     height: 100vh;
@@ -94,7 +111,7 @@ body{
         transform: scale(1.1);
     }
   h1{
-      color:white;
+        color:white;
         font-size: 100px;
         margin-left: 5%;
         font-weight: 700;
@@ -130,6 +147,7 @@ body{
         height: 200px;
         z-index: 1;
         margin-left: 5%;
+        margin-top: 40px;
         margin-bottom: 20px;
         transform: translateX(-30px);
         @include tablet{
@@ -151,6 +169,7 @@ body{
         }
     }
   }
+  // About us section
   #about-us{
     width: 100vw;
     overflow: hidden;
@@ -238,6 +257,89 @@ body{
           }
         }
       }
+  }
+  // Newsletter Section
+  #newsletter{
+    height: auto;
+    overflow: hidden;
+    .register-info-wrapper{
+      height: auto;
+      background-color: $bg-black;
+      color: white;
+      font-weight: 700;
+      font-style: italic;
+      .register-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 13vh 0 20vh 0;
+        position: relative;
+        h1{
+          z-index: 10;
+          font-size: 80px;
+          transform: translateX(-60px);
+          margin: 7px auto;
+          @include tablet{
+            font-size: 65px;
+            transform: translateX(-40px);
+          }
+          @include mobile{
+            font-size: 35px;
+            transform: translateX(-30px);
+          }
+        }
+        h2{
+          z-index: 10;
+          font-size: 50px;
+          transform: translateX(-30px);
+          margin: 5px auto;
+          @include tablet{
+            font-size: 40px;
+          }
+          @include mobile{
+            font-size: 20px;
+            transform: translateX(-15px);
+          }
+        }
+        h3{
+          z-index: 10;
+          text-align: center;
+          font-size: 25px;
+          margin: 3px auto;
+          @include tablet{
+            font-size: 20px;
+          }
+          @include mobile{
+            font-size: 10px;
+          }
+        }
+        .circle{
+          width: 168px;
+          height: 168px;
+          border-radius: 50%;
+          background-color: $red;
+          position: absolute;
+          z-index: 1;
+          left: 26vw;
+          top: 11.5vh;
+          @include tablet{
+            width: 100px;
+            height: 100px;
+            left: 7vw;
+            top: 12.5vh;
+          }
+          @include mobile{
+            width: 50px;
+            height: 50px;
+            left: 7vw;
+            top: 13.5vh;
+          }
+        }
+      }
+    }
   }
 }
 </style>
