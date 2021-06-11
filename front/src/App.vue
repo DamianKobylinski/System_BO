@@ -25,7 +25,7 @@
       </h3>
       <div class="main-title">
         <h1>Tworzymy <span>nowe</span> możliwości!</h1>
-        <div class="circle"></div>
+        <div class="circle" />
       </div>
       <ol>
         <li>
@@ -59,10 +59,9 @@
             Dokonaj rejestracji <br>
             Wypełnij formularz otrzymasz więcej informacji
           </h3>
-          <div class="circle"></div>
+          <div class="circle" />
         </div>
       </div>
-
     </section>
   </div>
 </template>
@@ -324,18 +323,18 @@ body{
           position: absolute;
           z-index: 1;
           left: 26vw;
-          top: 11.5vh;
+          top: 17%;
           @include tablet{
             width: 100px;
             height: 100px;
             left: 7vw;
-            top: 12.5vh;
+            top: 24%;
           }
           @include mobile{
             width: 50px;
             height: 50px;
             left: 7vw;
-            top: 13.5vh;
+            top: 28%;
           }
         }
       }
