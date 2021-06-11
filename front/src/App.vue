@@ -17,6 +17,38 @@
         alt=""
       >
     </section>
+    <!-- About Us Section -->
+    <section id="about-us">
+      <h3>
+        Botakmam to grupa osób współdziałających ze sobą przy organizacji i realizacji
+        wieloletniego projektu dla przedsiębiorców i osób indywidualnych
+      </h3>
+      <div class="main-title">
+        <h1>Tworzymy <span>nowe</span> możliwości!</h1>
+        <div class="circle"></div>
+      </div>
+      <ol>
+        <li>
+          Zamknięta grupa osób/firm wdrażająca wieloletni PROJEKT*,
+          gdzie Wszyscy działają na zasadzie wspólnego zaufania i porozumienia.
+        </li>
+        <li>
+          W ramach grupy, każdy z współuczestników realizuje i odpowiada za przypisaną
+          mu część w projekcie. Każdy może zgłaszać nowe, świeże pomysły,
+          mając w ten sposób wpływ na szybszą i lepszą realizację
+          projektu  i rozwój  całego projektu Botakmam.pl
+        </li>
+        <li>
+          Współpraca odbywa się w ramach B2B. Wynagrodzenie za wkład pracy realizowane jest po
+          każdym zakończonym etapie projektu w postaci ustalonego z góry sposobu wynagrodzenia.
+        </li>
+        <li>
+          Kooperatywa nie oznacza Wszyscy po równo.  Procent wynagrodzenia zależy od rodzaju pracy,
+          wkładu pracy, zaangażowania czasu,
+          wiedzy itp.  według  ustalonych i podpisywanych umów z każdym z Uczestników indywidualnie.
+        </li>
+      </ol>
+    </section>
   </div>
 </template>
 
@@ -61,25 +93,22 @@ body{
         z-index: -1;
         transform: scale(1.1);
     }
-  }
   h1{
-        color:white;
+      color:white;
         font-size: 100px;
         margin-left: 5%;
-        top: 300px;
         font-weight: 700;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         span {
             color: $red;
         }
         @include tablet{
             font-size: 70px;
-            transform: translateY(-50px);
             margin-bottom: 30px;
         }
         @include mobile{
             font-size: 50px;
-            transform: translateY(-50px);
+            margin-bottom: 30px;
         }
     }
     h2{
@@ -91,11 +120,9 @@ body{
         margin-top: 3px;
         @include tablet{
             font-size: 35px;
-            transform: translateY(-50px);
         }
         @include mobile{
             font-size: 25px;
-            transform: translateY(-50px);
         }
     }
     .logo{
@@ -123,5 +150,94 @@ body{
             display: none;
         }
     }
+  }
+  #about-us{
+    width: 100vw;
+    overflow: hidden;
+      h3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 70%;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 30px;
+        margin: 100px auto;
+        @include tablet{
+          font-size: 20px;
+          margin: 60px auto;
+        }
+        @include mobile{
+          font-size: 17px;
+          margin: 60px auto;
+        }
+      }
+      .main-title{
+        width: 100%;
+        position: relative;
+        margin: 40px auto;
+        text-align: center;
+        h1{
+          font-weight: 700;
+          font-size: 68px;
+          @include tablet{
+            font-size: 50px;
+            margin: 20px auto;
+          }
+          @include mobile{
+            font-size: 40px;
+            margin: 20px auto;
+          }
+
+        }
+        .circle{
+          width: 168px;
+          height: 168px;
+          border-radius: 50%;
+          background-color: $red;
+          position: absolute;
+          z-index: -1;
+          left: 20%;
+          top: -40px;
+          @include tablet{
+            width: 100px;
+            height: 100px;
+            top: -20px;
+          }
+          @include mobile{
+            width: 50px;
+            height: 50px;
+            top: 0;
+            left: 45px;
+          }
+        }
+        span{
+          color: $red;
+        }
+      }
+      ol{
+        width: 80%;
+        text-align: center;
+        list-style: decimal;
+        margin: 100px auto;
+        font-size: 30px;
+        font-weight: 500;
+        @include tablet{
+            font-size: 25px;
+            margin: 50px auto;
+          }
+        @include mobile{
+          font-size: 17px;
+          margin: 50px auto;
+        }
+        li{
+          margin-bottom: 30px;
+          @include tablet{
+            margin-bottom: 15px;
+          }
+        }
+      }
+  }
 }
 </style>
