@@ -61,15 +61,20 @@
           </h3>
           <div class="circle" />
         </div>
+        <Form />
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import Form from './components/Form.vue';
 
 export default {
   name: 'App',
+  components: {
+    Form,
+  },
 };
 </script>
 
@@ -263,7 +268,6 @@ body{
     overflow: hidden;
     .register-info-wrapper{
       height: auto;
-      background-color: $bg-black;
       color: white;
       font-weight: 700;
       font-style: italic;
@@ -276,14 +280,15 @@ body{
         height: 100%;
         padding: 13vh 0 20vh 0;
         position: relative;
+        background-color: $bg-black;
         h1{
           z-index: 10;
           font-size: 80px;
           transform: translateX(-60px);
           margin: 7px auto;
           @include tablet{
-            font-size: 65px;
-            transform: translateX(-40px);
+            font-size: 55px;
+            transform: translateX(-20px);
           }
           @include mobile{
             font-size: 35px;
