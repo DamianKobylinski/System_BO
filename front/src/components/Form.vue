@@ -6,14 +6,21 @@
           type="text"
           placeholder="e-mail"
           class="email"
+          @input="handleEmailInput"
         >
         <input
           type="text"
           placeholder="imie i nazwisko"
           class="name"
+          @input="handleNameInput"
         >
       </div>
-      <input type="submit">
+      <input
+        type="submit"
+        class="submit-button"
+        content="Wyślij"
+        value="Wyślij"
+      >
     </form>
   </div>
 </template>
@@ -22,6 +29,22 @@
 
 export default {
   name: 'Form',
+  data() {
+    return {
+      emailInputValue: '',
+      nameInputValue: '',
+    };
+  },
+  methods: {
+    handleEmailInput(e) {
+      this.emailInputValue = e.target.value;
+      // console.log(this.emailInputValue);
+    },
+    handleNameInput(e) {
+      this.nameInputValue = e.target.value;
+      // console.log(this.nameInputValue);
+    },
+  },
 };
 </script>
 
@@ -58,15 +81,17 @@ export default {
         input{
             width: 30%;
             border: none;
-            border-bottom: 2px solid #000;
+            border-bottom: 2px solid $bg-black;
             text-align: center;
-            color: #000;
+            color: $bg-black;
             font-weight: 500;
             padding: 5px 0;
-            font-size: 15px;
+            font-size: 17px;
             margin: 20px 0;
+            transition: all ease-in 0.5s;
             &:focus{
               outline: none;
+              border-bottom: 2px solid $red;
             }
             &::placeholder{
               color: #9f9f9f;
@@ -78,6 +103,32 @@ export default {
               width: 60%;
             }
         }
+    }
+    .submit-button{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 38px;
+      border: none;
+      background-color: $red;
+      width: 170px;
+      height: 45px;
+      border-radius: 70px;
+      color: white;
+      font-weight: 700;
+      font-size: 17px;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+      &:hover{
+        background-color: $red-darker;
+      }
+      @include mobile{
+        cursor: auto;
+      }
+      @include tablet{
+        cursor: auto;
+      }
     }
 }
 </style>
