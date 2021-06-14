@@ -1,18 +1,21 @@
 <template>
   <div class="form-wrapper">
-    <form>
+    <form
+      method="POST"
+      @submit="postData"
+    >
       <div class="data-inputs">
         <input
+          v-model="inputValues.email"
           type="text"
           placeholder="e-mail"
           class="email"
-          @input="handleEmailInput"
         >
         <input
+          v-model="inputValues.name"
           type="text"
           placeholder="imie i nazwisko"
           class="name"
-          @input="handleNameInput"
         >
       </div>
       <input
@@ -26,23 +29,35 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+
+Vue.use(VueAxios, axios);
+
+const API = 'localhost:2000/';
 
 export default {
   name: 'Form',
   data() {
     return {
-      emailInputValue: '',
-      nameInputValue: '',
+      inputValues: {
+        email: '',
+        name: '',
+      },
     };
   },
   methods: {
-    handleEmailInput(e) {
-      this.emailInputValue = e.target.value;
-      // console.log(this.emailInputValue);
-    },
-    handleNameInput(e) {
-      this.nameInputValue = e.target.value;
-      // console.log(this.nameInputValue);
+    postData(e) {
+      e.preventDefault();
+      // console.log(this.inputValues);
+      this.axios.post(API, this.inputValues)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 };
