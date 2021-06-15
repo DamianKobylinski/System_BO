@@ -1,5 +1,6 @@
 <template>
   <div class="footer-wrapper">
+    <p>fgfdsgfds</p>
   </div>
 </template>
 
