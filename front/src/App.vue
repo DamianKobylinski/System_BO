@@ -20,8 +20,8 @@
     <!-- About Us Section -->
     <section id="about-us">
       <h3>
-        Botakmam to grupa osób współdziałających ze sobą przy organizacji i realizacji
-        wieloletniego projektu dla przedsiębiorców i osób indywidualnych
+        Botakmam to grupa osób współdziałających ze sobą przy organizacji i&nbsp;realizacji
+        wieloletniego projektu dla przedsiębiorców i&nbsp;osób indywidualnych
       </h3>
       <div class="main-title">
         <h1>Tworzymy <span>nowe</span> możliwości!</h1>
@@ -30,13 +30,13 @@
       <ol>
         <li>
           Zamknięta grupa osób/firm wdrażająca wieloletni PROJEKT*,
-          gdzie Wszyscy działają na zasadzie wspólnego zaufania i porozumienia.
+          gdzie Wszyscy działają na zasadzie wspólnego zaufania i&nbsp;porozumienia.
         </li>
         <li>
-          W ramach grupy, każdy z współuczestników realizuje i odpowiada za przypisaną
+          W ramach grupy, każdy z współuczestników realizuje i&nbsp;odpowiada za przypisaną
           mu część w projekcie. Każdy może zgłaszać nowe, świeże pomysły,
-          mając w ten sposób wpływ na szybszą i lepszą realizację
-          projektu  i rozwój  całego projektu Botakmam.pl
+          mając w ten sposób wpływ na szybszą i&nbsp;lepszą realizację
+          projektu  i&nbsp;rozwój  całego projektu Botakmam.pl
         </li>
         <li>
           Współpraca odbywa się w ramach B2B. Wynagrodzenie za wkład pracy realizowane jest po
@@ -45,7 +45,8 @@
         <li>
           Kooperatywa nie oznacza Wszyscy po równo.  Procent wynagrodzenia zależy od rodzaju pracy,
           wkładu pracy, zaangażowania czasu,
-          wiedzy itp.  według  ustalonych i podpisywanych umów z każdym z Uczestników indywidualnie.
+          wiedzy itp.  według  ustalonych i&nbsp;podpisywanych
+           umów z każdym z Uczestników indywidualnie.
         </li>
       </ol>
     </section>
