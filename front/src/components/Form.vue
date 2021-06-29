@@ -18,12 +18,16 @@
           class="name"
         >
       </div>
-      <input
+      <button
         type="submit"
         class="submit-button"
-        content="Wyślij"
-        value="Wyślij"
       >
+        <div v-show="!isLoading">Wyślij</div>
+        <i
+          v-show="isLoading"
+          class="lds-dual-ring"
+        />
+      </button>
     </form>
   </div>
 </template>
@@ -45,18 +49,22 @@ export default {
         email: '',
         name: '',
       },
+      isLoading: false,
     };
   },
   methods: {
     postData(e) {
       e.preventDefault();
+      this.isLoading = true;
       // console.log(this.inputValues);
       this.axios.post(API, this.inputValues)
         .then((result) => {
           console.log(result);
+          this.isLoading = false;
         })
         .catch((error) => {
           console.log(error);
+          this.isLoading = false;
         });
     },
   },
@@ -70,7 +78,7 @@ export default {
     box-shadow: 0px 4px 25px 6px #000000;
     border-radius: 130px;
     margin: 0 auto;
-    height: 300px;
+    height: 340px;
     transform: translateY(-100px);
     display: flex;
     align-items: center;
@@ -120,9 +128,10 @@ export default {
         }
     }
     .submit-button{
+      position: relative;
       display: flex;
-      align-content: center;
       justify-content: center;
+      align-items: center;
       margin: 0 auto;
       margin-top: 38px;
       border: none;
@@ -145,5 +154,26 @@ export default {
         cursor: auto;
       }
     }
+    .lds-dual-ring {
+        display: inline-block;
+      }
+      .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        animation: lds-dual-ring 1.5s linear infinite;
+      }
+      @keyframes lds-dual-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
 }
 </style>
