@@ -6,12 +6,14 @@
     >
       <div class="data-inputs">
         <input
+          id="emailFormNewsletter"
           v-model="inputValues.email"
           type="text"
           placeholder="e-mail"
           class="email"
         >
         <input
+          id="nameFormNewsletter"
           v-model="inputValues.name"
           type="text"
           placeholder="imie i nazwisko"
@@ -19,6 +21,7 @@
         >
       </div>
       <input
+        id="submitNewsletter"
         type="submit"
         class="submit-button"
         content="Wyślij"
