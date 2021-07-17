@@ -64,16 +64,19 @@
         <Form />
       </div>
     </section>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Form from '@/components/Form.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     Form,
+    Footer,
   },
 };
 </script>
@@ -342,14 +345,17 @@ body{
           @include tablet{
             width: 100px;
             height: 100px;
-            left: 7vw;
+            left: 15vw;
             top: 24%;
           }
           @include mobile{
             width: 50px;
             height: 50px;
             left: 7vw;
-            top: 28%;
+            top: 27%;
+          }
+          @media screen and (max-height: 360px) {
+            top: 19%;
           }
         }
       }

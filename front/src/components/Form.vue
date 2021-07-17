@@ -48,7 +48,6 @@ export default {
   methods: {
     postData(e) {
       e.preventDefault();
-      console.log(this.inputValues.email + ' - ' + this.inputValues.name);
       this.axios.post(API, this.inputValues)
         .then((result) => {
           console.log(result);
@@ -78,6 +77,9 @@ export default {
     }
     @include mobile{
       border-radius: 80px;
+    }
+    @media screen and (max-height: 360px) {
+      transform: translateY(-50px);
     }
     .data-inputs{
         width: 90vw;
