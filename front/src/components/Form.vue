@@ -1,8 +1,7 @@
 <template>
   <div class="form-wrapper">
     <form
-      method="POST"
-      @submit="postData"
+        @submit="postData"
     >
       <div class="data-inputs">
         <input
@@ -11,6 +10,7 @@
           type="text"
           placeholder="e-mail"
           class="email"
+          maxlength="50"
         >
         <input
           id="nameFormNewsletter"
@@ -18,6 +18,7 @@
           type="text"
           placeholder="imie i nazwisko"
           class="name"
+          maxlength="60"
         >
       </div>
       <input
@@ -32,7 +33,7 @@
 </template>
 
 <script>
-const API = 'localhost:2000/';
+const API = 'http://localhost:2000';
 
 export default {
   name: 'Form',
@@ -47,13 +48,13 @@ export default {
   methods: {
     postData(e) {
       e.preventDefault();
-      // console.log(this.inputValues);
+      console.log(this.inputValues.email + ' - ' + this.inputValues.name);
       this.axios.post(API, this.inputValues)
         .then((result) => {
           console.log(result);
         })
         .catch((error) => {
-          console.log(error);
+          console.log(error + this.inputValues.email + this.inputValues.name);
         });
     },
   },
