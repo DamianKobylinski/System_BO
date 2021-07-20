@@ -45,16 +45,25 @@ export default {
       },
     };
   },
+  mounted() {
+    if (this.$cookies.isKey('email')) {
+      this.inputValues.email = this.$cookies.get('email');
+    }
+    if (this.$cookies.isKey('name')) {
+      this.inputValues.name = this.$cookies.get('name');
+    }
+  },
   methods: {
-    postData(e) {
+    async postData(e) {
       e.preventDefault();
-      this.axios.post(API, this.inputValues)
+      await this.axios.post(API, this.inputValues)
         .then((result) => {
           console.log(result);
         })
         .catch((error) => {
           console.log(error + this.inputValues.email + this.inputValues.name);
         });
+      this.$router.push('/form');
     },
   },
 };
