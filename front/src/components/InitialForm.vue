@@ -26,7 +26,7 @@
         type="submit"
         class="submit-button"
         content="Wyślij"
-        value="Wyślij"
+        :value="sumbitValue"
       >
     </form>
   </div>
@@ -36,18 +36,20 @@
 const API = 'http://localhost:2000';
 
 export default {
-  name: 'Form',
+  name: 'InitialForm',
   data() {
     return {
       inputValues: {
         email: '',
         name: '',
       },
+      sumbitValue: 'Wyślij',
     };
   },
   mounted() {
     if (this.$cookies.isKey('email')) {
       this.inputValues.email = this.$cookies.get('email');
+      this.sumbitValue = 'Dokończ';
     }
     if (this.$cookies.isKey('name')) {
       this.inputValues.name = this.$cookies.get('name');

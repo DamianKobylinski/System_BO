@@ -61,7 +61,7 @@
           </h3>
           <div class="circle" />
         </div>
-        <Form />
+        <InitialForm />
       </div>
     </section>
     <Footer />
@@ -69,13 +69,13 @@
 </template>
 
 <script>
-import Form from '@/components/Form.vue';
+import InitialForm from '@/components/InitialForm.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    Form,
+    InitialForm,
     Footer,
   },
 };
