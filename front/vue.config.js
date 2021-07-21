@@ -8,6 +8,7 @@ module.exports = {
         target: 'http://localhost:2000',
       },
     },
+    historyApiFallback: true,
   },
   css: {
     loaderOptions: {

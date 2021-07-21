@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Newsletter from '../views/Newsletter.vue';
 import MainForm from '../views/MainForm.vue';
+import AdminPanel from '../views/AdminPanel.vue';
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/form',
     name: 'MainForm',
     component: MainForm,
+  },
+  {
+    path: '/admin',
+    name: 'AdminPanel',
+    component: AdminPanel,
   },
 ];
 
