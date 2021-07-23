@@ -1,5 +1,5 @@
 <template>
-  <div id="newsletter">
+  <div id="newsletter-wrapper">
     <!-- Landing Page Section -->
     <section id="landing">
       <img
@@ -95,7 +95,7 @@ body{
 }
 
 /* App */
-#newsletter {
+#newsletter-wrapper {
   // Landing Section
   #landing{
     width: 100%;
