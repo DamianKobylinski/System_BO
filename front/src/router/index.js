@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Newsletter from '../views/Newsletter.vue';
 import MainForm from '../views/MainForm.vue';
-import AdminPanel from '../views/AdminPanel.vue';
+import AdminPanelLogin from '../views/AdminPanelLogin.vue';
+import store from '../store';
 
 const routes = [
   {
@@ -13,11 +14,18 @@ const routes = [
     path: '/form',
     name: 'MainForm',
     component: MainForm,
+    beforeEnter: (to, from, next) => {
+      if (store.state.isInDatabase) {
+        next();
+      } else {
+        next('/');
+      }
+    },
   },
   {
-    path: '/admin',
-    name: 'AdminPanel',
-    component: AdminPanel,
+    path: '/admin-login',
+    name: 'AdminPanelLogin',
+    component: AdminPanelLogin,
   },
 ];
 

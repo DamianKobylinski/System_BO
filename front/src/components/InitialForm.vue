@@ -11,6 +11,7 @@
           placeholder="e-mail"
           class="email"
           maxlength="50"
+          @change="dataChanged"
         >
         <input
           id="nameFormNewsletter"
@@ -19,6 +20,7 @@
           placeholder="imie i nazwisko"
           class="name"
           maxlength="60"
+          @change="dataChanged"
         >
       </div>
       <input
@@ -59,13 +61,15 @@ export default {
     async postData(e) {
       e.preventDefault();
       await this.axios.post(API, this.inputValues)
-        .then((result) => {
-          console.log(result);
+        .then(() => {
+          this.$router.push('/form');
         })
         .catch((error) => {
-          console.log(error + this.inputValues.email + this.inputValues.name);
+          console.log(error);
         });
-      this.$router.push('/form');
+    },
+    dataChanged() {
+      this.sumbitValue = 'Wyślij';
     },
   },
 };

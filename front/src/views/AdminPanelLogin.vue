@@ -1,9 +1,9 @@
 <template>
-    <div>Admin Panel</div>
+    <div>Admin Panel Login</div>
 </template>
 
 <script>
 export default {
-  name: 'AdminPanel',
+  name: 'AdminPanelLogin',
 };
 </script>
