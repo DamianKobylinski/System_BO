@@ -30,6 +30,7 @@
         content="Wyślij"
         :value="sumbitValue"
       >
+      <p v-if="formError.show" class="error-info">Unexpected error: {{ formError.content }}</p>
     </form>
   </div>
 </template>
@@ -46,6 +47,10 @@ export default {
         name: '',
       },
       sumbitValue: 'Wyślij',
+      formError: {
+        show: false,
+        content: '',
+      },
     };
   },
   mounted() {
@@ -64,8 +69,10 @@ export default {
         .then(() => {
           this.$router.push('/form');
         })
-        .catch((error) => {
-          console.log(error);
+        .catch((err) => {
+          this.formError.show = true;
+          this.formError.content = err.message;
+          console.log(err.message);
         });
     },
     dataChanged() {
@@ -133,6 +140,23 @@ export default {
               width: 60%;
             }
         }
+    }
+    .error-info{
+      position: absolute;
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include tablet {
+        font-size: 12px;
+        bottom: 10px;
+      }
+      @include mobile {
+        font-size: 10px;
+        bottom: 8px;
+      }
     }
     .submit-button{
       display: flex;
