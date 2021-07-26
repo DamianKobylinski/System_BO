@@ -7,15 +7,19 @@
         src="@/assets/img/logo.svg"
         alt=""
         >
-        <form>
+        <form
+          @submit.prevent="handleFormSubmit"
+        >
           <input
           id="adminPanelLogin"
+          v-model="adminPanelLoginValues.login"
           type="text"
           class="login"
           placeholder="login"
           >
           <input
           id="adminPanelPassword"
+          v-model="adminPanelLoginValues.password"
           type="text"
           class="password"
           placeholder="password"
@@ -24,7 +28,7 @@
            id="adminPanelSubmit"
            type="submit"
            class="submit"
-           value="Login in"
+           value="Log in"
           >
         </form>
       </div>
@@ -33,8 +37,32 @@
 </template>
 
 <script>
+import axios from 'axios';
+
+const API = 'http://localhost:2000';
+
 export default {
   name: 'AdminPanelLogin',
+  data() {
+    return {
+      adminPanelLoginValues: {
+        login: '',
+        password: '',
+      },
+    };
+  },
+  methods: {
+    async handleFormSubmit() {
+      await axios
+        .post(API, this.adminPanelLoginValues)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  },
 };
 </script>
 

@@ -198,7 +198,7 @@ body{
         width: 70%;
         font-weight: 400;
         font-style: italic;
-        font-size: 30px;
+        font-size: 28px;
         margin: 100px auto;
         @include tablet{
           font-size: 20px;
@@ -253,18 +253,18 @@ body{
         }
       }
       ol{
-        width: 80%;
+        width: 70%;
         text-align: center;
         list-style: decimal;
         margin: 100px auto;
-        font-size: 30px;
+        font-size: 28px;
         font-weight: 500;
         @include tablet{
             font-size: 25px;
             margin: 50px auto;
           }
         @include mobile{
-          font-size: 17px;
+          font-size: 16px;
           margin: 50px auto;
         }
         li{

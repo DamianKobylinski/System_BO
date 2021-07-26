@@ -1,7 +1,7 @@
 <template>
   <div class="form-wrapper">
     <form
-        @submit="postData"
+        @submit.prevent="handleInitialFormSubmit"
     >
       <div class="data-inputs">
         <input
@@ -63,16 +63,15 @@ export default {
     }
   },
   methods: {
-    async postData(e) {
-      e.preventDefault();
-      await this.axios.post(API, this.inputValues)
+    async handleInitialFormSubmit() {
+      await this.axios
+        .post(API, this.inputValues)
         .then(() => {
           this.$router.push('/form');
         })
         .catch((err) => {
           this.formError.show = true;
           this.formError.content = err.message;
-          console.log(err.message);
         });
     },
     dataChanged() {
@@ -100,7 +99,7 @@ export default {
     @include mobile{
       border-radius: 80px;
     }
-    @media screen and (max-height: 360px) {
+    @media screen and (max-height: 414px) {
       transform: translateY(-50px);
     }
     .data-inputs{
