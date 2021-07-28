@@ -61,11 +61,11 @@ export default {
       await this.axios.post(API, this.inputValues)
         .then((result) => {
           console.log(result);
+          this.$router.push('/form');
         })
         .catch((error) => {
           console.log(error + this.inputValues.email + this.inputValues.name);
         });
-      this.$router.push('/form');
     },
   },
 };
