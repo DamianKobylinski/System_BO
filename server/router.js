@@ -1,5 +1,7 @@
 const express = require("express");
 const mysql = require("mysql");
+const passhash = require("password-hash");
+const jwt = require("jsonwebtoken");
 const router = express.Router();
 
 require('dotenv').config();
@@ -9,6 +11,42 @@ const connectToDatabase = mysql.createConnection({
     user: 'interauto_botodb',
     password: 'sk(jD&shd&^^Sdhds9!sjEa',
     database: 'interauto_botodb'
+});
+
+
+router.post("/admin-login", (req, res) => {
+    let loginUser = req.body.login;
+    let passwordUser = req.body.password;
+    let sqlTakeAdminUser = `SELECT * FROM admin_table WHERE username=` + mysql.escape(loginUser);
+    try {
+        connectToDatabase.query(sqlTakeAdminUser, (err, result) => {
+            if (err) {
+                throw err;
+            } else {
+                if (result.length <= 0) {
+                    res.json({
+                        error: "Don't have this user in the database.",
+                        success: false,
+                    });
+                } else {
+                    if (passhash.verify(passwordUser, result[0].password)) {
+                        res.json({
+                            token: jwt.sign(loginUser, process.env.TOKEN),
+                            success: true,
+                        });
+                    } else {
+                        res.json({
+                            error: "Invalid password.",
+                            success: false,
+                        });
+                    }
+                }
+            }
+        });
+    } catch (e) {
+        console.log(e);
+    }
+
 });
 
 router.post("/", (req, res) => {
@@ -45,5 +83,6 @@ router.post("/", (req, res) => {
         });
     }
 });
+
 
 module.exports = router;

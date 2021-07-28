@@ -15,12 +15,14 @@
           v-model="adminPanelLoginValues.login"
           type="text"
           class="login"
+          name="login"
           placeholder="login"
           >
           <input
           id="adminPanelPassword"
           v-model="adminPanelLoginValues.password"
-          type="text"
+          type="password"
+          name="password"
           class="password"
           placeholder="password"
           >
@@ -39,7 +41,7 @@
 <script>
 import axios from 'axios';
 
-const API = 'http://localhost:2000';
+const API = 'http://localhost:2000/admin-login';
 
 export default {
   name: 'AdminPanelLogin',
@@ -115,7 +117,7 @@ export default {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    input[type=text] {
+    input[type=text], input[type=password] {
       margin-top: 30px;
       border: none;
       border-bottom: 2px solid $bg-black;
