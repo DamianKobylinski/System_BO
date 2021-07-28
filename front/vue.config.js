@@ -8,11 +8,12 @@ module.exports = {
         target: 'http://localhost:2000',
       },
     },
+    historyApiFallback: true,
   },
   css: {
     loaderOptions: {
       sass: {
-        data: `
+        prependData: `
             @import "@/assets/scss/_colors.scss";
             @import "@/assets/scss/_fonts.scss";
             @import "@/assets/scss/_mixins.scss";

@@ -1,12 +1,22 @@
 const express = require("express");
+const cookie_parser = require("cookie-parser");
 const bodyParser = require("body-parser");
-const cors = require("cors");
-const routing = require("./routing.js");
+const passport = require('passport');
+const newsletterRouter = require("./router");
 const server = express();
 const port = 2000;
 
-server.use(express.static(__dirname + '/public'));
 
-server.listen(port,()=>{
+server.use(bodyParser.urlencoded({extended: true}));
+server.use(bodyParser.json());
+server.use(bodyParser.raw());
+server.use(cookie_parser());
+server.use(passport.initialize());
+server.use(passport.session());
+server.use(express.static(__dirname + "/public"));
+
+server.use("/", newsletterRouter);
+
+server.listen(port, () => {
     console.log(`Listen: ${port} `);
 });
