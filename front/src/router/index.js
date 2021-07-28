@@ -1,9 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Newsletter from '../views/Newsletter.vue';
 import MainForm from '../views/MainForm.vue';
-import AdminPanelLogin from '../views/AdminPanelLogin.vue';
-import PageNotFound from '../views/PageNotFound.vue';
-import store from '../store';
+import AdminPanel from '../views/AdminPanel.vue';
 
 const routes = [
   {
@@ -15,23 +13,11 @@ const routes = [
     path: '/form',
     name: 'MainForm',
     component: MainForm,
-    beforeEnter: (to, from, next) => {
-      if (store.state.isInDatabase) {
-        next();
-      } else {
-        next('/');
-      }
-    },
   },
   {
-    path: '/admin-login',
-    name: 'AdminPanelLogin',
-    component: AdminPanelLogin,
-  },
-  {
-    path: '/:catchAll(.*)',
-    name: 'PageNotFound',
-    component: PageNotFound,
+    path: '/admin',
+    name: 'AdminPanel',
+    component: AdminPanel,
   },
 ];
 
