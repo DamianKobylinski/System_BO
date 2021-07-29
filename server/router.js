@@ -7,10 +7,10 @@ const router = express.Router();
 require('dotenv').config();
 
 const connectToDatabase = mysql.createConnection({
-    host: 'mariadb105.interauto.nazwa.pl',
-    user: 'interauto_botodb',
-    password: 'sk(jD&shd&^^Sdhds9!sjEa',
-    database: 'interauto_botodb'
+    host: process.env.DBHOST,
+    user: process.env.DBUSER,
+    password: process.env.DBPASSWORD,
+    database: process.env.DBDATABASE
 });
 
 

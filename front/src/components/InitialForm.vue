@@ -59,8 +59,8 @@ export default {
     async postData(e) {
       e.preventDefault();
       await this.axios.post(API, this.inputValues)
-        .then((result) => {
-          console.log(result);
+        .then(() => {
+          this.$store.state.isInDatabase = true;
           this.$router.push('/form');
         })
         .catch((error) => {
