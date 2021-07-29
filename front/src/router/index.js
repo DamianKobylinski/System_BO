@@ -16,6 +16,7 @@ const routes = [
     name: 'MainForm',
     component: MainForm,
     beforeEnter: (to, from, next) => {
+      console.log(store.state.isInDatabase);
       if (store.state.isInDatabase) {
         next();
       } else {

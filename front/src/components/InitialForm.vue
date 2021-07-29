@@ -1,7 +1,7 @@
 <template>
   <div class="form-wrapper">
     <form
-        @submit.prevent="handleInitialFormSubmit"
+        @submit="postData"
     >
       <div class="data-inputs">
         <input
@@ -11,7 +11,6 @@
           placeholder="e-mail"
           class="email"
           maxlength="50"
-          @change="dataChanged"
         >
         <input
           id="nameFormNewsletter"
@@ -20,7 +19,6 @@
           placeholder="imie i nazwisko"
           class="name"
           maxlength="60"
-          @change="dataChanged"
         >
       </div>
       <input
@@ -30,7 +28,6 @@
         content="Wyślij"
         :value="sumbitValue"
       >
-      <p v-if="formError.show" class="error-info">Unexpected error: {{ formError.content }}</p>
     </form>
   </div>
 </template>
@@ -47,10 +44,6 @@ export default {
         name: '',
       },
       sumbitValue: 'Wyślij',
-      formError: {
-        show: false,
-        content: '',
-      },
     };
   },
   mounted() {
@@ -63,19 +56,16 @@ export default {
     }
   },
   methods: {
-    async handleInitialFormSubmit() {
-      await this.axios
-        .post(API, this.inputValues)
+    async postData(e) {
+      e.preventDefault();
+      await this.axios.post(API, this.inputValues)
         .then(() => {
+          this.$store.state.isInDatabase = true;
           this.$router.push('/form');
         })
-        .catch((err) => {
-          this.formError.show = true;
-          this.formError.content = err.message;
+        .catch((error) => {
+          console.log(error + this.inputValues.email + this.inputValues.name);
         });
-    },
-    dataChanged() {
-      this.sumbitValue = 'Wyślij';
     },
   },
 };
@@ -99,7 +89,7 @@ export default {
     @include mobile{
       border-radius: 80px;
     }
-    @media screen and (max-height: 414px) {
+    @media screen and (max-height: 360px) {
       transform: translateY(-50px);
     }
     .data-inputs{
@@ -139,23 +129,6 @@ export default {
               width: 60%;
             }
         }
-    }
-    .error-info{
-      position: absolute;
-      color: red;
-      font-size: 14px;
-      text-align: center;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      @include tablet {
-        font-size: 12px;
-        bottom: 10px;
-      }
-      @include mobile {
-        font-size: 10px;
-        bottom: 8px;
-      }
     }
     .submit-button{
       display: flex;
