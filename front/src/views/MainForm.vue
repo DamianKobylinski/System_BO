@@ -16,7 +16,7 @@
           <h2>Dowiedz się o nas więcej i&nbsp;wypełnij krótki formularz.</h2>
         </div>
       </section>
-      <section id="what-is-bo">
+      <section id="what-is-bo-section">
         <div class="background"></div>
         <div class="info-wrapper">
           <h1>Co to właściwie jest <span>BoTakMam</span>?</h1>
@@ -38,12 +38,48 @@
           </p>
         </div>
       </section>
+      <section id="main-ideas-section">
+        <Idea
+          icon="globe-europe"
+          message=
+          "
+          Budując globalny trend otwieramy nowe drzwi,
+          które dają możliwość szybkiego samorozwoju
+          oraz wyjątkowej formy zarobkowania wszystkim uczestnikom.
+          "
+        />
+        <Idea
+          icon="user"
+          message=
+          "
+          Tworzymy nasze jutro na własnych warunkach
+          i zasadach w
+          innowacyjny, nowoczesny sposób.
+          "
+        />
+        <Idea
+          icon="child"
+          message=
+          "
+          Nieważne ile masz lat i gdzie mieszkasz, wszystko będzie odbywać
+          się online tak, aby wszelkie działania ograniczyć do Twojego
+          własnego laptopa i dostępu do internetu.
+
+          "
+        />
+
+      </section>
     </div>
 </template>
 
 <script>
+import Idea from '@/components/Idea.vue';
+
 export default {
   name: 'MainForm',
+  components: {
+    Idea,
+  },
 };
 </script>
 
@@ -93,7 +129,7 @@ export default {
       height: 200px;
       margin-top: 50px;
       @include mobile {
-        widows: 100px;
+        width: 100px;
         height: 100px;
       }
       @media screen and (max-height: 360px) {
@@ -143,10 +179,10 @@ export default {
     }
   }
 }
-#what-is-bo {
+#what-is-bo-section {
   position: relative;
   .background {
-    background-color: #FAFAFA;
+    background-color: #F9F9F9;
     background-size: 100% auto;
     clip-path: polygon(25% 0%, 75% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
     position: absolute;
@@ -204,6 +240,11 @@ export default {
       }
     }
   }
+}
+
+#main-ideas-section {
+  background-color: #222222;
+  padding: 100px 0 10px 0;
 }
 
 </style>
