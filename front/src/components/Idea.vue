@@ -41,7 +41,7 @@ export default {
     }
     .icon-wrapper {
       position: relative;
-      padding: 50px 50px;
+      padding: 40px 50px;
       .idea-icon {
         color: white;
         font-size: 60px;
@@ -69,7 +69,7 @@ export default {
         width: 80%;
       }
       @include mobile {
-        font-size: .88rem;
+        font-size: .95rem;
         width: 100%;
       }
     }

@@ -67,7 +67,23 @@
 
           "
         />
-
+      </section>
+      <section id="keystones-section">
+        <h1>Filary <span>BoTakMam</span></h1>
+        <div class="keystones-wrapper">
+          <div class="keystone">
+            <fa class="icon" icon="briefcase" />
+            <p>Biznes</p>
+          </div>
+          <div class="keystone">
+            <fa class="icon" icon="brain" />
+            <p>Rozwój osobisty</p>
+          </div>
+          <div class="keystone">
+            <fa class="icon" icon="rocket" />
+            <p>Pasja</p>
+          </div>
+        </div>
       </section>
     </div>
 </template>
@@ -236,7 +252,7 @@ export default {
       }
       @include mobile {
         width: 90%;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
       }
     }
   }
@@ -245,6 +261,51 @@ export default {
 #main-ideas-section {
   background-color: #222222;
   padding: 100px 0 10px 0;
+}
+#keystones-section {
+  background-color: #161616;
+  color: white;
+  padding: 50px 0;
+  h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    letter-spacing: .8px;
+    word-spacing: 2px;
+    @include mobile {
+      font-size: 2rem;
+    }
+    span {
+      color: $red;
+    }
+  }
+  .keystones-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 50px;
+    @include mobile {
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 0;
+    }
+    .keystone {
+      @include mobile {
+        margin-top: 55px;
+      }
+      .icon {
+        font-size: 60px;
+      }
+      p {
+        font-size: 1.3rem;
+        margin-top: 20px;
+        color: $red;
+        font-weight: 500;
+        word-spacing: 2px;
+      }
+    }
+  }
 }
 
 </style>
