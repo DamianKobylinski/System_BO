@@ -132,12 +132,36 @@
       <section id="benefits-section">
         <h1>Jako <span>BoTakMam</span> zapewniamy:</h1>
         <div class="grid">
-          <ReverseCard />
-          <ReverseCard />
-          <ReverseCard />
-          <ReverseCard />
-          <ReverseCard />
-          <ReverseCard />
+          <ReverseCard
+            iconName="book"
+            frontHeaderContent="Minimum formalności"
+            textContent="Text"
+          />
+          <ReverseCard
+            iconName="sitemap"
+            frontHeaderContent="Organizację wdrażanych etapów"
+            textContent="Text"
+          />
+          <ReverseCard
+            iconName="laptop-house"
+            frontHeaderContent="Pracę zdalną"
+            textContent="Text"
+          />
+          <ReverseCard
+            iconName="smile-wink"
+            frontHeaderContent="Przyjazną atmosferę"
+            textContent="Text"
+          />
+          <ReverseCard
+            iconName="level-up-alt"
+            frontHeaderContent="Codzienną motywację"
+            textContent="Text"
+          />
+          <ReverseCard
+            iconName="people-carry"
+            frontHeaderContent="Pomoc w realizacji powierzonych zadań"
+            textContent="Text"
+          />
         </div>
       </section>
     </div>
@@ -396,7 +420,7 @@ export default {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 200px;
+    grid-gap: 170px;
     align-items: center;
     @media screen and (max-width: 1220px) {
       grid-template-columns: repeat(2, 1fr);
