@@ -85,16 +85,75 @@
           </div>
         </div>
       </section>
+      <section id="short-answers-section">
+        <ShortAnswer
+          iconName="user-check"
+          headerContent="Dla kogo jest ten projekt?"
+          textContent=
+          "
+          Beneficjentami projektu są przedsiębiorcy, oraz osoby indywidualne
+          zamieszkujące dowolne miejsce na świecie.
+          "
+        />
+        <ShortAnswer
+          iconName="flag"
+          headerContent="Produkt Polski"
+          textContent=
+          "
+          Łączymy wyjątkowych ludzi z całego kraju, a
+          swoim działaniem aktywnie wspieramy polską gospodarkę.
+          "
+        />
+        <ShortAnswer
+          iconName="clock"
+          headerContent="Harmonogram projektu"
+          textContent=
+          "
+          Projekt składa się z wielu zasadniczych etapów. Każdy z nich
+          oznacza organizację i realizację projektu “Botakmam.pl” według
+          ustalonych zadań. Szczegółowy harmonogram projektu zostanie
+          przedstawiony po ustaleniu osób odpowiedzialnych za
+          poszczególne działania i etapy realizacji.
+          "
+        />
+        <ShortAnswer
+          iconName="dollar-sign"
+          headerContent="Harmonogram projektu"
+          textContent=
+          "
+          Projekt składa się z wielu zasadniczych etapów. Każdy z nich
+          oznacza organizację i realizację projektu “Botakmam.pl” według
+          ustalonych zadań. Szczegółowy harmonogram projektu zostanie
+          przedstawiony po ustaleniu osób odpowiedzialnych za
+          poszczególne działania i etapy realizacji.
+          "
+        />
+      </section>
+      <section id="benefits-section">
+        <h1>Jako <span>BoTakMam</span> zapewniamy:</h1>
+        <div class="grid">
+          <ReverseCard />
+          <ReverseCard />
+          <ReverseCard />
+          <ReverseCard />
+          <ReverseCard />
+          <ReverseCard />
+        </div>
+      </section>
     </div>
 </template>
 
 <script>
-import Idea from '@/components/Idea.vue';
+import Idea from '../components/Idea.vue';
+import ShortAnswer from '../components/ShortAnswer.vue';
+import ReverseCard from '../components/ReverseCard.vue';
 
 export default {
   name: 'MainForm',
   components: {
     Idea,
+    ShortAnswer,
+    ReverseCard,
   },
 };
 </script>
@@ -307,5 +366,45 @@ export default {
     }
   }
 }
+#short-answers-section {
+  padding: 0 0 90px 0;
+}
 
+#benefits-section {
+  background-color: #EDEDED;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0 70px 0;
+  h1 {
+    font-weight: 600;
+    font-size: 4rem;
+    padding: 100px 0;
+    width: 80%;
+    @include tablet {
+      font-size: 3.5rem;
+    }
+    @include mobile {
+      font-size: 3rem;
+    }
+    span {
+      color: $red;
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 200px;
+    align-items: center;
+    @media screen and (max-width: 1220px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 776px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 70px;
+    }
+  }
+}
 </style>
