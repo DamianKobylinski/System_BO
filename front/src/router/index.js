@@ -16,7 +16,6 @@ const routes = [
     name: 'MainForm',
     component: MainForm,
     beforeEnter: (to, from, next) => {
-      console.log(store.state.isInDatabase);
       if (store.state.isInDatabase) {
         next();
       } else {
@@ -39,11 +38,17 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
+  scrollBehavior(to, from, SavedPosition) {  // eslint-disable-line
+    if (to.hash) {
+      const el = window.location.href.split('#')[1];
+      if (el.length) {
+        document.getElementById(el).scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (SavedPosition) {
+      return SavedPosition;
+    } else {
+      document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
     }
-    return { x: 0, y: 0 };
   },
 });
 

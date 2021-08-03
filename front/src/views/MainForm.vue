@@ -179,6 +179,9 @@ export default {
     ShortAnswer,
     ReverseCard,
   },
+  // mounted(){
+  //   window.scrollTo(0,0);
+  // },
 };
 </script>
 

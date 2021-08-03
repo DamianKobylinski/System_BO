@@ -62,12 +62,19 @@ router.post("/", (req, res) => {
         saveUninitialized: true,
         resave: true,
     })
-    let setNewEngagePersonSQLQuery = `INSERT INTO newsletter_engage(name,email,engage_date) VALUES (?)`;
+    let setNewEngagePersonSQLQuery = `INSERT INTO newsletter_engage(name,email,engage_date, dlaczego_chcesz_przystapic_do_naszego_projektu, jakie_sa_twoje_umiejetnosci_i_mozliwosci,jakie_pomysly_chcialbys_zrealizowac, dlaczego_powinnismy_wybrac_wlasnie_ciebie, czy_potrafisz_programowac, czy_potrafisz_administrowac_bazami_danych, temat_kryptowalut) VALUES (?)`;
     let date = new Date();
     let valuesOfNewEngagePerson = [
         req.body.name,
         req.body.email,
-        date
+        date,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
     ];
     if (req.body.name.length < 2 || req.body.email.length < 6) {
         console.log("Error: Valid username or email.");
