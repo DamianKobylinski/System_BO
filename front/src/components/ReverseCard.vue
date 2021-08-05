@@ -94,7 +94,7 @@ export default {
             font-size: 17px;
             transform: rotateY(180deg);
             p {
-                padding: 10px;
+                padding: 20px;
             }
         }
     }

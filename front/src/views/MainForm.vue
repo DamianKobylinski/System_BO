@@ -118,14 +118,14 @@
         />
         <ShortAnswer
           iconName="dollar-sign"
-          headerContent="Harmonogram projektu"
+          headerContent="Budżet projektu"
           textContent=
           "
-          Projekt składa się z wielu zasadniczych etapów. Każdy z nich
-          oznacza organizację i realizację projektu “Botakmam.pl” według
-          ustalonych zadań. Szczegółowy harmonogram projektu zostanie
-          przedstawiony po ustaleniu osób odpowiedzialnych za
-          poszczególne działania i etapy realizacji.
+          Projekt samofinansujący się, szczegóły budżetu zostaną ustalone i
+          przekazane po zebraniu zespołu realizującego projekt.
+          Po każdym etapie następuje rozliczenie i podsumowanie pracy
+          “Botakmam.pl”, a także wypłata wynagrodzenia według wcześniej
+          ustalonych zasad.
           "
         />
       </section>
@@ -135,33 +135,100 @@
           <ReverseCard
             iconName="book"
             frontHeaderContent="Minimum formalności"
-            textContent="Text"
+            textContent=
+            "
+            Koniec z tyranią urzędów i biurokracji! Wszelkie formalne rozliczenia
+            i&nbsp;papierologiczne obciążenia już nigdy nie będą Twoim zmartwieniem.
+            "
           />
           <ReverseCard
             iconName="sitemap"
             frontHeaderContent="Organizację wdrażanych etapów"
-            textContent="Text"
+            textContent=
+            "
+            Nie wiesz jak zacząć pracę? Żaden problem! Organizacją
+            zajmiemy się osobiście, a ty zawsze otrzymasz jasno
+            sprecyzowane i konkretne zadania.
+            "
           />
           <ReverseCard
             iconName="laptop-house"
             frontHeaderContent="Pracę zdalną"
-            textContent="Text"
+            textContent=
+            "
+            Ceny paliwa niejednokrotnie potrafią popsuć
+            nawet najlepszy dzień, ale spokojnie,
+            z nami ci to nie grozi! Laptop z dotępem do
+            internetu będzie wszystkim czego potrzebujesz.
+            "
           />
           <ReverseCard
             iconName="smile-wink"
             frontHeaderContent="Przyjazną atmosferę"
-            textContent="Text"
+            textContent=
+            "
+            Nie ma nic przyjemniejszego niż praca w otoczeniu przyjaciół.
+            Serdeczność, uczciwość i wsparcie, które znajdziesz w naszym
+            zespole z pewnością dodadzą ci skrzydeł!
+            "
           />
           <ReverseCard
             iconName="level-up-alt"
             frontHeaderContent="Codzienną motywację"
-            textContent="Text"
+            textContent=
+            "
+            Jakiś złoczyńca posypał twoją pizzę kawałkami ananasa? Nie pozwolimy,
+            aby twój cały twój dzień legł przez to
+            w gruzach! Wierzymy w twój potencjał i będziemy Cię aktywnie
+            wspierać w wyciąganiu każdego fragmentu!
+            "
           />
           <ReverseCard
             iconName="people-carry"
             frontHeaderContent="Pomoc w realizacji powierzonych zadań"
-            textContent="Text"
+            textContent=
+            "
+            Społeczność BoTakMam to rodzina, która nigdy nie zostawi Cię
+            samego z nierozwiązanym
+            problemem. Gdy otrzymasz już swoje zadanie zrobimy wszystko, aby
+            udało ci się doprowadzić je do końca.
+            "
           />
+        </div>
+      </section>
+      <section id="conclusion-section">
+        <h1>Podsumowując</h1>
+        <h2>Czym będą zajmować się poszczególni współpracownicy w Botakmam.pl? </h2>
+        <p>
+          Każdy otrzyma przypisaną sobie część, za którą będzie w całości
+          odpowiadać. Do zrealizowania jest wiele zadań: od promocji, reklamy i
+          programowania poprzez organizację szkoleń, cateringu, materiałów
+          szkoleniowych, wycieczek, transportu, ubezpieczenia, integracji,
+          rekrutacji, realizacji warsztatów, networkingu, aż do koordynacji
+          działań całościowych i wyszczególnionych. Bez wątpienia każdy
+          znajdzie dla siebie część, która pozwoli uwydatnić, oraz wykorzystać
+          jego umiejętności, predyspozycje i chęci.
+        </p>
+        <p>
+          Wchodzisz w to? – działasz. <br>
+          Masz problem? – prosisz o pomoc. <br>
+          Nie chcesz, lub nie możesz dalej działać? –
+          informujesz i odchodzisz.
+        </p>
+        <p>
+          Kooperatywa to wyjście z dyskomfortu siebie samego.
+          Nie płacisz za wejście do kooperatywy, a wynagrodzenie
+          otrzymujesz po efektywnie zakończonym etapie.
+        </p>
+      </section>
+      <section id="between-section">
+        <div class="circle"></div>
+        <div class="catch-someone-attention">
+          <p>
+            Uważasz, że szukamy <br> właśnie
+            <span class="you">Ciebie</span>
+            <span class="question-mark">?</span>
+          </p>
         </div>
       </section>
     </div>
@@ -179,9 +246,6 @@ export default {
     ShortAnswer,
     ReverseCard,
   },
-  // mounted(){
-  //   window.scrollTo(0,0);
-  // },
 };
 </script>
 
@@ -431,6 +495,121 @@ export default {
     @media screen and (max-width: 776px) {
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 70px;
+    }
+  }
+}
+#conclusion-section {
+  padding: 100px 0 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    font-size: 3.3rem;
+    color: $red;
+    margin-bottom: 70px;
+    font-weight: 600;
+    @include mobile {
+      font-size: 2.7rem;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 80px;
+    padding: 0 30px;
+    @include mobile {
+      font-size: 1.7rem;
+    }
+
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0 20vw;
+    margin-bottom: 40px;
+    @include mobile {
+      font-size: 1rem;
+      padding: 0 20px;
+    }
+  }
+}
+#between-section {
+  padding: 100px 0;
+  background-color: $bg-black;
+  color: white;
+  font-weight: 600;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  .circle {
+    background-color: $red;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    top: -200px;
+    left: -200px;
+    z-index: -1;
+    @media screen and (max-width: 520px) {
+        width: 200px;
+        height: 200px;
+        top: -100px;
+        left: -100px;
+      }
+  }
+  .catch-someone-attention {
+    p {
+      font-size: 5rem;
+      line-height: 80px;
+      @media screen and (max-width: 1200px) {
+        font-size: 3.5rem;
+        line-height: 50px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 3rem;
+        line-height: 30px;
+      }
+      @media screen and (max-width: 520px) {
+        font-size: 2rem;
+      }
+      .you {
+        color: $red;
+        position: relative;
+        top: 30px;
+        font-size: 7rem;
+        @media screen and (max-width: 1200px) {
+          font-size: 5rem;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 3.5rem;
+        }
+        @media screen and (max-width: 520px) {
+          font-size: 2.5rem;
+          top: 10px;
+        }
+      }
+      .question-mark {
+        font-size: 9rem;
+        position: relative;
+        top: 50px;
+        padding: 0 10px;
+        @media screen and (max-width: 1200px) {
+          font-size: 7rem;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 5rem;
+        }
+        @media screen and (max-width: 520px) {
+          font-size: 3rem;
+          top: 20px;
+        }
+      }
     }
   }
 }
