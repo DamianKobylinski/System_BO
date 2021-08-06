@@ -231,6 +231,10 @@
           </p>
         </div>
       </section>
+      <section id="form-section">
+        <Form />
+      </section>
+      <Footer />
     </div>
 </template>
 
@@ -238,6 +242,8 @@
 import Idea from '../components/Idea.vue';
 import ShortAnswer from '../components/ShortAnswer.vue';
 import ReverseCard from '../components/ReverseCard.vue';
+import Form from '../components/Form.vue';
+import Footer from '../components/Footer.vue';
 
 export default {
   name: 'MainForm',
@@ -245,6 +251,8 @@ export default {
     Idea,
     ShortAnswer,
     ReverseCard,
+    Form,
+    Footer,
   },
 };
 </script>
@@ -536,7 +544,7 @@ export default {
   }
 }
 #between-section {
-  padding: 100px 0;
+  padding: 100px 0 200px 0;
   background-color: $bg-black;
   color: white;
   font-weight: 600;
