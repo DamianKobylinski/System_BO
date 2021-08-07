@@ -13,6 +13,20 @@ const connectToDatabase = mysql.createConnection({
     database: process.env.DBDATABASE
 });
 
+router.post("/admin-panel", (req, res) => {
+    let sqlTakeAllUsers = `SELECT * FROM newsletter_engage`;
+    connectToDatabase.query(sqlTakeAllUsers, (err, result) => {
+        if (err) {
+            throw err;
+        } else {
+            res.json({
+                status: 200,
+                users: result,
+            });
+        }
+    });
+
+});
 
 router.post("/admin-login", (req, res) => {
     let loginUser = req.body.login;
