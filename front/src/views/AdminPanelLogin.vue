@@ -1,41 +1,41 @@
 <template>
-    <div id="admin-panel-login-wrapper">
-      <div class="triangle triangle-top"></div>
-      <div class="login-wrapper">
-        <img
+  <div id="admin-panel-login-wrapper">
+    <div class="triangle triangle-top"></div>
+    <div class="login-wrapper">
+      <img
         class="logo"
         src="@/assets/img/logo.svg"
         alt=""
-        >
-        <form
-          @submit.prevent="handleFormSubmit"
-        >
-          <input
+      >
+      <form
+        @submit.prevent="handleFormSubmit"
+      >
+        <input
           id="adminPanelLogin"
           v-model="adminPanelLoginValues.login"
           type="text"
           class="login"
           name="login"
           placeholder="login"
-          >
-          <input
+        >
+        <input
           id="adminPanelPassword"
           v-model="adminPanelLoginValues.password"
           type="password"
           name="password"
           class="password"
           placeholder="password"
-          >
-          <input
-           id="adminPanelSubmit"
-           type="submit"
-           class="submit"
-           value="Log in"
-          >
-        </form>
-      </div>
-      <div class="triangle triangle-bottom"></div>
+        >
+        <input
+          id="adminPanelSubmit"
+          type="submit"
+          class="submit"
+          value="Log in"
+        >
+      </form>
     </div>
+    <div class="triangle triangle-bottom"></div>
+  </div>
 </template>
 
 <script>
@@ -58,7 +58,10 @@ export default {
       await axios
         .post(API, this.adminPanelLoginValues)
         .then((result) => {
-          console.log(result);
+          if (result.data.success === true) {
+            this.$store.state.isAdminSuccessLogin = true;
+            this.$router.push('/admin-panel');
+          }
         })
         .catch((err) => {
           console.log(err);
@@ -77,6 +80,7 @@ export default {
   width: 0;
   height: 0;
 }
+
 .triangle-top {
   border-top: 100px solid $red;
   border-right: 100px solid transparent;
@@ -84,6 +88,7 @@ export default {
   left: 0;
   top: 0;
 }
+
 .triangle-bottom {
   border-bottom: 100px solid $red;
   border-left: 100px solid transparent;
@@ -91,13 +96,15 @@ export default {
   right: 0;
   bottom: 0;
 }
+
 .login-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+
   .logo {
     width: 200px;
     height: 200px;
@@ -112,11 +119,13 @@ export default {
       height: 100px;
     }
   }
+
   form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     input[type=text], input[type=password] {
       margin-top: 30px;
       border: none;
@@ -126,13 +135,16 @@ export default {
       font-weight: 500;
       padding: 5px 0;
       font-size: 15px;
+
       &:focus {
         outline: none;
       }
+
       &::placeholder {
         color: #9f9f9f;
       }
     }
+
     input[type=submit] {
       border: none;
       background-color: $red;
