@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import Newsletter from '../views/Newsletter.vue';
 import MainForm from '../views/MainForm.vue';
 import AdminPanelLogin from '../views/AdminPanelLogin.vue';
+import AdminPanel from '../views/AdminPanel.vue';
 import PageNotFound from '../views/PageNotFound.vue';
 import store from '../store';
 
