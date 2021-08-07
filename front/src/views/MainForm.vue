@@ -621,4 +621,119 @@ export default {
     }
   }
 }
+#conclusion-section {
+  padding: 100px 0 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    font-size: 3.3rem;
+    color: $red;
+    margin-bottom: 70px;
+    font-weight: 600;
+    @include mobile {
+      font-size: 2.7rem;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 80px;
+    padding: 0 30px;
+    @include mobile {
+      font-size: 1.7rem;
+    }
+
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0 20vw;
+    margin-bottom: 40px;
+    @include mobile {
+      font-size: 1rem;
+      padding: 0 20px;
+    }
+  }
+}
+#between-section {
+  padding: 100px 0 200px 0;
+  background-color: $bg-black;
+  color: white;
+  font-weight: 600;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  .circle {
+    background-color: $red;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    top: -200px;
+    left: -200px;
+    z-index: -1;
+    @media screen and (max-width: 520px) {
+        width: 200px;
+        height: 200px;
+        top: -100px;
+        left: -100px;
+      }
+  }
+  .catch-someone-attention {
+    p {
+      font-size: 5rem;
+      line-height: 80px;
+      @media screen and (max-width: 1200px) {
+        font-size: 3.5rem;
+        line-height: 50px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 3rem;
+        line-height: 30px;
+      }
+      @media screen and (max-width: 520px) {
+        font-size: 2rem;
+      }
+      .you {
+        color: $red;
+        position: relative;
+        top: 30px;
+        font-size: 7rem;
+        @media screen and (max-width: 1200px) {
+          font-size: 5rem;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 3.5rem;
+        }
+        @media screen and (max-width: 520px) {
+          font-size: 2.5rem;
+          top: 10px;
+        }
+      }
+      .question-mark {
+        font-size: 9rem;
+        position: relative;
+        top: 50px;
+        padding: 0 10px;
+        @media screen and (max-width: 1200px) {
+          font-size: 7rem;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 5rem;
+        }
+        @media screen and (max-width: 520px) {
+          font-size: 3rem;
+          top: 20px;
+        }
+      }
+    }
+  }
+}
 </style>

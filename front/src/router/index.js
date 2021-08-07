@@ -29,6 +29,18 @@ const routes = [
     component: AdminPanelLogin,
   },
   {
+    path: '/admin-panel',
+    name: 'AdminPanel',
+    component: AdminPanel,
+    beforeEnter: (to, from, next) => {
+      if (store.state.isAdminSuccessLogin) {
+        next();
+      } else {
+        next('/admin-login');
+      }
+    },
+  },
+  {
     path: '/:catchAll(.*)',
     name: 'PageNotFound',
     component: PageNotFound,
