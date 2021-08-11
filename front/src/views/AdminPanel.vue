@@ -13,7 +13,7 @@
         <li v-on:click="takePeopleFromNewsletter">Newsletter</li>
       </ul>
       <div id="logout">
-        <p>Log out</p>
+        <p v-on:click="logoutFromAdmin">Log out</p>
       </div>
     </menu>
     <section>
@@ -43,7 +43,34 @@
           value="Search"
         >
       </form>
-      <div id="adminTableView"></div>
+      <div id="adminTableView">
+        <table>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Dlaczego chcesz przystąpić do naszego projektu?</th>
+            <th>Jakie są twoje umiejętności i możliwości?</th>
+            <th>Jakie pomysły chciałbyś zrealizować dołączając do naszego zespołu?</th>
+            <th>Dlaczego powinniśmy wybrać właśnie ciebie?</th>
+            <th>Czy potrafisz programować? Jeżeli tak, to w jakim/jakich językach?</th>
+            <th>Czy potrafisz administrować bazami danych? Czy posiadasz w tej kwestii doświadczenie?</th>
+            <th>Jeśli temat kryptowalut nie jest Ci obcy, opowiedz nam proszę w jakich obszarach działasz.</th>
+          </tr>
+          <tr v-for="user in users" :key="user.id">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.engage_date }}</td>
+            <td>{{ user.dlaczego_chcesz_przystapic_do_naszego_projektu }}</td>
+            <td>{{ user.jakie_sa_twoje_umiejetnosci_i_mozliwosci }}</td>
+            <td>{{ user.jakie_pomysly_chcialbys_zrealizowac }}</td>
+            <td>{{ user.dlaczego_powinnismy_wybrac_wlasnie_ciebie }}</td>
+            <td>{{ user.czy_potrafisz_programowac }}</td>
+            <td>{{ user.czy_potrafisz_administrowac_bazami_danych }}</td>
+            <td>{{ user.temat_kryptowalut }}</td>
+          </tr>
+        </table>
+      </div>
     </section>
   </div>
 </template>
@@ -61,20 +88,37 @@ export default {
       adminPanelData: {
         username: '',
         email: '',
+        isCheck: false,
       },
       users: [],
     };
   },
   methods: {
     async takePeopleFromNewsletter() {
+      this.adminPanelData.isCheck = false;
       await axios
-        .post(API)
+        .post(API, this.adminPanelData)
         .then((result) => {
-          console.log(result.data.users);
+          this.users = result.data.users;
         })
         .catch((err) => {
           console.log(err);
         });
+    },
+    async checkForSubmit() {
+      this.adminPanelData.isCheck = true;
+      await axios
+        .post(API, this.adminPanelData)
+        .then((result) => {
+          this.users = result.data.users;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    async logoutFromAdmin() {
+      this.$store.state.isAdminSuccessLogin = false;
+      await this.$router.push('/admin-login');
     },
   },
 };
@@ -89,6 +133,23 @@ export default {
 
 .redTextColor {
   color: $red;
+}
+
+table {
+  table-layout: fixed;
+  width: 300%;
+  border: 5px solid $bg-black;
+  border-collapse: collapse;
+}
+
+tr {
+  text-align: center;
+  flex: 0 0 auto;
+
+  & th, td {
+    border: 5px solid $bg-black;
+    padding: 15px 10px;
+  }
 }
 
 menu {
@@ -123,6 +184,7 @@ menu {
     & li {
       cursor: pointer;
     }
+
     & li:hover {
       color: #fff;
     }
@@ -170,12 +232,17 @@ section {
       letter-spacing: 3px;
     }
   }
+
   & #adminTableView {
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 20px;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    height: 80vh;
+    overflow-y: auto;
   }
+
 }
 
 </style>

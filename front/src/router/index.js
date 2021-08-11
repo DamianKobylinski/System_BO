@@ -3,6 +3,7 @@ import Newsletter from '../views/Newsletter.vue';
 import MainForm from '../views/MainForm.vue';
 import AdminPanelLogin from '../views/AdminPanelLogin.vue';
 import AdminPanel from '../views/AdminPanel.vue';
+import ThankYou from '../views/ThankYou.vue';
 import PageNotFound from '../views/PageNotFound.vue';
 import store from '../store';
 
@@ -38,6 +39,18 @@ const routes = [
         next();
       } else {
         next('/admin-login');
+      }
+    },
+  },
+  {
+    path: '/thankyou',
+    name: 'ThankYou',
+    component: ThankYou,
+    beforeEnter: (to, from, next) => {
+      if (store.state.isFormSent) {
+        next();
+      } else {
+        next('/');
       }
     },
   },

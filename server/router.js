@@ -13,19 +13,37 @@ const connectToDatabase = mysql.createConnection({
     database: process.env.DBDATABASE
 });
 
-router.post("/admin-panel", (req, res) => {
-    let sqlTakeAllUsers = `SELECT * FROM newsletter_engage`;
-    connectToDatabase.query(sqlTakeAllUsers, (err, result) => {
-        if (err) {
-            throw err;
-        } else {
-            res.json({
-                status: 200,
-                users: result,
-            });
-        }
-    });
+let nameOfNewEngaged;
+let emailOfNewEngaged;
 
+router.post("/admin-panel", (req, res) => {
+    if (req.body.isCheck === true) {
+        let nameEngaged = req.body.username;
+        let emailEngaged = req.body.email;
+        let sqlTakeSpecificUser = `SELECT * FROM newsletter_engage WHERE name='${nameEngaged}' OR email='${emailEngaged}'`;
+        connectToDatabase.query(sqlTakeSpecificUser, (err, result) => {
+            if (err) {
+                throw err;
+            } else {
+                res.json({
+                    status: 200,
+                    users: result,
+                });
+            }
+        });
+    } else {
+        let sqlTakeAllUsers = `SELECT * FROM newsletter_engage`;
+        connectToDatabase.query(sqlTakeAllUsers, (err, result) => {
+            if (err) {
+                throw err;
+            } else {
+                res.json({
+                    status: 200,
+                    users: result,
+                });
+            }
+        });
+    }
 });
 
 router.post("/admin-login", (req, res) => {
@@ -63,7 +81,29 @@ router.post("/admin-login", (req, res) => {
 
 });
 
+router.post("/form", (req, res) => {
+
+    let queryUpdateFormOfTheNewEngaged = `UPDATE newsletter_engage SET dlaczego_chcesz_przystapic_do_naszego_projektu = '${req.body.whyJoin}', jakie_sa_twoje_umiejetnosci_i_mozliwosci = '${req.body.skills}',jakie_pomysly_chcialbys_zrealizowac = '${req.body.ideas}', dlaczego_powinnismy_wybrac_wlasnie_ciebie = '${req.body.whyYou}', czy_potrafisz_programowac = '${req.body.programmingSkills}', czy_potrafisz_administrowac_bazami_danych = '${req.body.databasesSkills}', temat_kryptowalut = '${req.body.cryptoKnowledge}' WHERE email='${emailOfNewEngaged}'`;
+
+    try {
+        connectToDatabase.query(queryUpdateFormOfTheNewEngaged, function (err, result) {
+            if (err) {
+                throw err;
+            } else {
+                res.json({
+                    status: 200,
+                    message: result,
+                });
+            }
+        });
+    } catch (e) {
+        console.log("Update error: " + e);
+    }
+});
+
 router.post("/", (req, res) => {
+    nameOfNewEngaged = req.body.name;
+    emailOfNewEngaged = req.body.email;
     res.cookie("email", req.body.email, {
         maxAge: 24 * 60 * 60,
         secure: true,
@@ -90,19 +130,16 @@ router.post("/", (req, res) => {
         null,
         null
     ];
-    if (req.body.name.length < 2 || req.body.email.length < 6) {
-        console.log("Error: Valid username or email.");
-    } else {
-        connectToDatabase.query(setNewEngagePersonSQLQuery, [valuesOfNewEngagePerson], function (err) {
-            if (err) {
-                throw err;
-            } else {
-                res.json({
-                    status: 200,
-                });
-            }
-        });
-    }
+
+    connectToDatabase.query(setNewEngagePersonSQLQuery, [valuesOfNewEngagePerson], function (err) {
+        if (err) {
+            throw err;
+        } else {
+            res.json({
+                status: 200,
+            });
+        }
+    });
 });
 
 
