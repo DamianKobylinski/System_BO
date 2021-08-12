@@ -84,9 +84,15 @@ export default {
     InitialForm,
     Footer,
   },
+  mounted() {
+    if (localStorage.getItem('cookiesAccept')) {
+      this.$refs['cookie-law'].style.display = 'none';
+    }
+  },
   methods: {
     async acceptCookie() {
       this.$refs['cookie-law'].style.display = 'none';
+      localStorage.setItem('cookiesAccept', 'true');
     },
   },
 };
@@ -409,6 +415,7 @@ body {
   background-color: #fff;
   border-radius: 1em;
   z-index: 1;
+  box-shadow: 0px 4px 25px 6px #000000;
 
   & button {
     display: flex;
