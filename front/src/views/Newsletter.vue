@@ -139,7 +139,7 @@ body {
 
     h1 {
       color: white;
-      font-size: 70px;
+      font-size: 60px;
       margin-left: 5%;
       font-weight: 700;
       margin-bottom: 1vh;
