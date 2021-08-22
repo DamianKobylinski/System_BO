@@ -38,7 +38,7 @@
 </template>
 
 <script>
-const API = 'http://localhost:2000';
+const API = 'https://www.botakmam.pl';
 
 export default {
   name: 'InitialForm',

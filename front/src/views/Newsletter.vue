@@ -13,7 +13,7 @@
       <h2>Gratyfikacja</h2>
       <img
         class="woman"
-        src="@/assets/img/woman.svg"
+        src="@/assets/img/woman.png"
         alt=""
       >
     </section>

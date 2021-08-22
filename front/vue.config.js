@@ -5,7 +5,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/': {
-        target: 'http://localhost:2000',
+        target: 'https://www.botakmam.pl',
       },
     },
     historyApiFallback: true,

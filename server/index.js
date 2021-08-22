@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const passport = require('passport');
 const newsletterRouter = require("./router");
 const server = express();
-const port = 2000;
+const port = 80;
 
 
 server.use(bodyParser.urlencoded({extended: true}));

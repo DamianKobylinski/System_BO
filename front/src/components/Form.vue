@@ -72,7 +72,7 @@
 </template>
 
 <script>
-const API = 'http://localhost:2000/form';
+const API = 'https://www.botakmam.pl/form';
 
 export default {
   name: 'Form',

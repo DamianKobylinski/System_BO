@@ -41,7 +41,7 @@
 <script>
 import axios from 'axios';
 
-const API = 'http://localhost:2000/admin-login';
+const API = 'https://www.botakmam.pl/admin-login';
 
 export default {
   name: 'AdminPanelLogin',

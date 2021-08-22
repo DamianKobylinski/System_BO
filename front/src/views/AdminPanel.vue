@@ -79,7 +79,7 @@
 
 import axios from 'axios';
 
-const API = 'http://localhost:2000/admin-panel';
+const API = 'https://www.botakmam.pl/admin-panel';
 
 export default {
   name: 'AdminPanel',
