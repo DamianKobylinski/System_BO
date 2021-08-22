@@ -13,7 +13,7 @@ server.use(bodyParser.raw());
 server.use(cookie_parser());
 server.use(passport.initialize());
 server.use(passport.session());
-server.use(express.static(__dirname + "/public"));
+server.use("/", express.static(__dirname + "/public"));
 
 server.use("/", newsletterRouter);
 
