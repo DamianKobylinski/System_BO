@@ -11,6 +11,7 @@
           placeholder="e-mail"
           class="email"
           maxlength="50"
+          @change="valueChanged"
         >
         <input
           id="nameFormNewsletter"
@@ -19,6 +20,7 @@
           placeholder="imie i nazwisko"
           class="name"
           maxlength="60"
+          @change="valueChanged"
         >
       </div>
       <input
@@ -33,7 +35,7 @@
 </template>
 
 <script>
-const API = 'http://localhost:2000';
+const API = 'https://botakmam.herokuapp.com';
 
 export default {
   name: 'InitialForm',
@@ -64,8 +66,11 @@ export default {
           this.$router.push('/form');
         })
         .catch((error) => {
-          console.log(error + this.inputValues.email + this.inputValues.name);
+          console.log(error);
         });
+    },
+    valueChanged() {
+      this.sumbitValue = 'Wyślij';
     },
   },
 };

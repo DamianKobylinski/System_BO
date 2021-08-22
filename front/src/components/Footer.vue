@@ -8,22 +8,28 @@
       >
     </div>
     <div class="social-div">
-      <a href="#">
+      <a href="https://www.instagram.com/botakmam.pl/" target="_blank">
         <img
           src="../assets/img/instagram.svg"
-          alt="insagram"
+          alt="instagram"
         >
       </a>
-      <a href="#">
+      <a href="https://www.facebook.com/pages/category/Community/Botakmampl-104320105144827/" target="_blank">
         <img
           src="../assets/img/facebook.svg"
           alt="facebook"
         >
       </a>
-      <a href="#">
+      <a href="https://www.youtube.com/channel/UCm2N2HDcxnbqwjG96Fr93Ig" target="_blank">
         <img
           src="../assets/img/youtube.svg"
           alt="youtube"
+        >
+      </a>
+      <a href="https://www.tiktok.com/@botakmam" target="_blank">
+        <img
+          src="../assets/img/tik-tok.svg"
+          alt="tiktok"
         >
       </a>
     </div>

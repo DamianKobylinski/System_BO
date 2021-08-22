@@ -22,3 +22,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Font awesome
+<fa icon="name " />
+Icons to search
+https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=hand

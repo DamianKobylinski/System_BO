@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import Newsletter from '../views/Newsletter.vue';
 import MainForm from '../views/MainForm.vue';
 import AdminPanelLogin from '../views/AdminPanelLogin.vue';
+import AdminPanel from '../views/AdminPanel.vue';
+import ThankYou from '../views/ThankYou.vue';
 import PageNotFound from '../views/PageNotFound.vue';
 import store from '../store';
 
@@ -16,7 +18,6 @@ const routes = [
     name: 'MainForm',
     component: MainForm,
     beforeEnter: (to, from, next) => {
-      console.log(store.state.isInDatabase);
       if (store.state.isInDatabase) {
         next();
       } else {
@@ -30,6 +31,30 @@ const routes = [
     component: AdminPanelLogin,
   },
   {
+    path: '/admin-panel',
+    name: 'AdminPanel',
+    component: AdminPanel,
+    beforeEnter: (to, from, next) => {
+      if (store.state.isAdminSuccessLogin) {
+        next();
+      } else {
+        next('/admin-login');
+      }
+    },
+  },
+  {
+    path: '/thankyou',
+    name: 'ThankYou',
+    component: ThankYou,
+    beforeEnter: (to, from, next) => {
+      if (store.state.isFormSent) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {
     path: '/:catchAll(.*)',
     name: 'PageNotFound',
     component: PageNotFound,
@@ -39,6 +64,18 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior(to, from, SavedPosition) {  // eslint-disable-line
+    if (to.hash) {
+      const el = window.location.href.split('#')[1];
+      if (el.length) {
+        document.getElementById(el).scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (SavedPosition) {
+      return SavedPosition;
+    } else {
+      document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
+    }
+  },
 });
 
 export default router;
