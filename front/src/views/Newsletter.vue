@@ -139,9 +139,8 @@ body {
 
     h1 {
       color: white;
-      font-size: 60px;
+      font-size: 50px;
       margin-left: 5%;
-      font-weight: 700;
       margin-bottom: 1vh;
 
       span {
@@ -164,7 +163,6 @@ body {
     h2 {
       color: white;
       font-style: italic;
-      font-weight: 400;
       font-size: 25px;
       margin-left: 5%;
       margin-top: 3px;
@@ -216,14 +214,14 @@ body {
   #about-us {
     width: 100vw;
     overflow: hidden;
-
+    font-weight: 200;
     h3 {
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       width: 70%;
-      font-weight: 400;
+      font-weight: 200;
       font-style: italic;
       font-size: 20px;
       margin: 100px auto;
@@ -244,8 +242,9 @@ body {
       text-align: center;
 
       h1 {
-        font-weight: 700;
-        font-size: 34px;
+        font-weight: 200;
+        font-size: 28px;
+        margin: 20px auto;
         @include tablet {
           font-size: 50px;
           margin: 20px auto;
@@ -290,7 +289,7 @@ body {
       list-style: decimal;
       margin: 100px auto;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 200;
       @include tablet {
         font-size: 18px;
         margin: 50px auto;
@@ -317,7 +316,7 @@ body {
     .register-info-wrapper {
       height: auto;
       color: white;
-      font-weight: 700;
+      font-weight: 200;
       font-style: italic;
 
       .register-info {
@@ -327,36 +326,31 @@ body {
         flex-direction: column;
         width: 100%;
         height: 100%;
-        padding: 13vh 0 20vh 0;
+        padding: 7vh 0 20vh 0;
         position: relative;
         background-color: $bg-black;
 
         h1 {
           z-index: 10;
           font-size: 40px;
-          transform: translateX(-60px);
           margin: 7px auto;
           @include tablet {
             font-size: 27px;
-            transform: translateX(-20px);
           }
           @include mobile {
             font-size: 24px;
-            transform: translateX(-30px);
           }
         }
 
         h2 {
           z-index: 10;
           font-size: 25px;
-          transform: translateX(-30px);
           margin: 5px auto;
           @include tablet {
             font-size: 20px;
           }
           @include mobile {
             font-size: 18px;
-            transform: translateX(-15px);
           }
         }
 

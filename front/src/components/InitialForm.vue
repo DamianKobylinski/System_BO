@@ -84,10 +84,11 @@ export default {
 .form-wrapper{
     width: 90vw;
     background-color: white;
-    box-shadow: 0px 4px 25px 6px #000000;
+    //box-shadow: 0px 4px 25px 6px #000000;
+    border: 4px solid #000;
     border-radius: 130px;
     margin: 0 auto;
-    height: 300px;
+    height: 220px;
     transform: translateY(-100px);
     display: flex;
     align-items: center;
@@ -144,7 +145,6 @@ export default {
       align-content: center;
       justify-content: center;
       margin: 0 auto;
-      margin-top: 38px;
       border: none;
       background-color: $red;
       width: 170px;
@@ -152,6 +152,7 @@ export default {
       border-radius: 70px;
       color: white;
       font-weight: 700;
+      letter-spacing: 4px;
       font-size: 17px;
       cursor: pointer;
       transition: all 0.3s ease-in;
@@ -167,12 +168,12 @@ export default {
     }
 }
 .errorInfo {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: $red;
   position: absolute;
   bottom: 15px;
   @include mobile {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 }
 </style>
