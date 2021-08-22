@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const passport = require('passport');
 const newsletterRouter = require("./router");
 const server = express();
-const port = 80;
+const port = 443;
 
 
 server.use(bodyParser.urlencoded({extended: true}));
@@ -13,7 +13,7 @@ server.use(bodyParser.raw());
 server.use(cookie_parser());
 server.use(passport.initialize());
 server.use(passport.session());
-server.use(express.static(__dirname + "/public"));
+server.use("/", express.static(__dirname + "/public"));
 
 server.use("/", newsletterRouter);
 
