@@ -5,7 +5,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/': {
-        target: 'https://www.botakmam.pl',
+        target: 'https://botakmam.herokuapp.com',
       },
     },
     historyApiFallback: true,

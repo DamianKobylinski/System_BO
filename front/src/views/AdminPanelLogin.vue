@@ -41,7 +41,7 @@
 <script>
 import axios from 'axios';
 
-const API = 'https://www.botakmam.pl/admin-login';
+const API = 'https://botakmam.herokuapp.com/admin-login';
 
 export default {
   name: 'AdminPanelLogin',

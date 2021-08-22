@@ -72,7 +72,7 @@
 </template>
 
 <script>
-const API = 'https://www.botakmam.pl/form';
+const API = 'https://botakmam.herokuapp.com/form';
 
 export default {
   name: 'Form',

@@ -7,12 +7,11 @@
         <input
           id="emailFormNewsletter"
           v-model="inputValues.email"
-          type="email"
+          type="text"
           placeholder="e-mail"
           class="email"
           maxlength="50"
           @change="valueChanged"
-          required
         >
         <input
           id="nameFormNewsletter"
@@ -22,7 +21,6 @@
           class="name"
           maxlength="60"
           @change="valueChanged"
-          required
         >
       </div>
       <input
@@ -33,12 +31,11 @@
         :value="sumbitValue"
       >
     </form>
-    <p class="errorInfo">{{ errorValue }}</p>
   </div>
 </template>
 
 <script>
-const API = 'https://www.botakmam.pl';
+const API = 'https://botakmam.herokuapp.com';
 
 export default {
   name: 'InitialForm',
@@ -49,7 +46,6 @@ export default {
         name: '',
       },
       sumbitValue: 'Wyślij',
-      errorValue: '',
     };
   },
   mounted() {
@@ -70,7 +66,7 @@ export default {
           this.$router.push('/form');
         })
         .catch((error) => {
-          this.errorValue = error.message;
+          console.log(error);
         });
     },
     valueChanged() {
@@ -163,15 +159,6 @@ export default {
       }
       @include tablet{
         cursor: auto;
-      }
-    }
-    .errorInfo {
-      font-size: 0.9rem;
-      color: $red;
-      position: absolute;
-      bottom: 15px;
-      @include mobile {
-        font-size: 0.7rem;
       }
     }
 }
