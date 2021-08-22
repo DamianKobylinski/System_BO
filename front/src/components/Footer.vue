@@ -53,14 +53,14 @@ export default {
   .footer-wrapper {
     background: $bg-black;
     width: 100vw;
-    height: 250px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
     .footer-logo {
-      width: 77px;
-      height: 117px
+      width: 57px;
+      height: 67px
     }
     p {
       color: #fff;
@@ -68,10 +68,9 @@ export default {
       font-weight: 200;
     }
     .copyrights {
-      margin-top: 50px;
       z-index: 1;
       padding: 0 10px 10px 10px;
-      margin: 30px 10px 0 0;
+      margin: 40px 10px 0 0;
      }
     .social-div {
       width: 75%;
@@ -86,7 +85,7 @@ export default {
         z-index: 1;
         width: 50px;
         height: 100%;
-        margin: 0 50px;
+        margin: 20px 50px;
         display: flex;
         flex-direction: row;
         align-items: center;

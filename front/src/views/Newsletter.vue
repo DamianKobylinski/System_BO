@@ -25,7 +25,7 @@
       </h3>
       <div class="main-title">
         <h1>Tworzymy <span>nowe</span> możliwości!</h1>
-        <div class="circle"/>
+<!--        <div class="circle"/>-->
       </div>
       <ol>
         <li>
@@ -59,7 +59,7 @@
             Dokonaj rejestracji <br>
             Wypełnij formularz otrzymasz więcej informacji
           </h3>
-          <div class="circle"/>
+<!--          <div class="circle"/>-->
         </div>
         <InitialForm/>
       </div>
@@ -117,7 +117,7 @@ body {
   // Landing Section
   #landing {
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     overflow: hidden;
     position: relative;
 
@@ -142,7 +142,8 @@ body {
       font-size: 50px;
       margin-left: 5%;
       margin-bottom: 1vh;
-
+      font-weight: 400;
+      letter-spacing: 5px;
       span {
         color: $red;
       }
@@ -165,7 +166,9 @@ body {
       font-style: italic;
       font-size: 25px;
       margin-left: 5%;
-      margin-top: 3px;
+      margin-top: 7px;
+      font-weight: 200;
+      letter-spacing: 5px;
       @include tablet {
         font-size: 20px;
       }
@@ -198,11 +201,11 @@ body {
     }
 
     .woman {
-      width: 35vw;
-      height: auto;
+      width: 400px;
+      height: 500px;
       position: absolute;
-      bottom: -20px;
-      right: 0;
+      bottom: -30px;
+      right: 50px;
       object-fit: cover;
       @include large-tablet {
         display: none;
@@ -328,12 +331,13 @@ body {
         height: 100%;
         padding: 7vh 0 20vh 0;
         position: relative;
-        background-color: $bg-black;
-
+        background-color: #fff;
+        color: $bg-black;
         h1 {
           z-index: 10;
           font-size: 40px;
-          margin: 7px auto;
+          margin: 5px auto;
+          font-weight: 200;
           @include tablet {
             font-size: 27px;
           }
@@ -346,6 +350,7 @@ body {
           z-index: 10;
           font-size: 25px;
           margin: 5px auto;
+          font-weight: 200;
           @include tablet {
             font-size: 20px;
           }
@@ -359,6 +364,7 @@ body {
           text-align: center;
           font-size: 20px;
           margin: 3px auto;
+          font-weight: 200;
           @include tablet {
             font-size: 16px;
           }
@@ -375,11 +381,11 @@ body {
           position: absolute;
           z-index: 1;
           left: 26vw;
-          top: 17%;
+          top: 5%;
           @include tablet {
             width: 100px;
             height: 100px;
-            left: 15vw;
+            left: 13vw;
             top: 24%;
           }
           @include mobile {

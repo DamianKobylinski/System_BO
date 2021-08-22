@@ -29,7 +29,7 @@
         id="submitNewsletter"
         type="submit"
         class="submit-button"
-        content="Wyślij"
+        content="Dołącz !"
         :value="sumbitValue"
       >
     </form>
@@ -82,10 +82,9 @@ export default {
 
 <style lang="scss" scoped>
 .form-wrapper{
-    width: 90vw;
+    width: 80vw;
     background-color: white;
     //box-shadow: 0px 4px 25px 6px #000000;
-    border: 4px solid #000;
     border-radius: 130px;
     margin: 0 auto;
     height: 220px;
@@ -144,7 +143,7 @@ export default {
       display: flex;
       align-content: center;
       justify-content: center;
-      margin: 0 auto;
+      margin: 50px auto;
       border: none;
       background-color: $red;
       width: 170px;
