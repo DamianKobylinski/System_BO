@@ -5,7 +5,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/': {
-        target: 'https://botakmam.herokuapp.com',
+        target: 'https://hidden-waters-71562.herokuapp.com/',
       },
     },
     historyApiFallback: true,
