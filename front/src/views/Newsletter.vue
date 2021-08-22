@@ -139,7 +139,7 @@ body {
 
     h1 {
       color: white;
-      font-size: 100px;
+      font-size: 70px;
       margin-left: 5%;
       font-weight: 700;
       margin-bottom: 1vh;
@@ -149,15 +149,15 @@ body {
       }
 
       @include tablet {
-        font-size: 70px;
+        font-size: 45px;
         margin-bottom: 1vh;
       }
       @include mobile {
-        font-size: 50px;
+        font-size: 35px;
         margin-bottom: 1vh;
       }
       @media screen and (max-height: 380px) {
-        font-size: 49px;
+        font-size: 25px;
       }
     }
 
@@ -165,17 +165,17 @@ body {
       color: white;
       font-style: italic;
       font-weight: 400;
-      font-size: 50px;
+      font-size: 25px;
       margin-left: 5%;
       margin-top: 3px;
       @include tablet {
-        font-size: 35px;
+        font-size: 20px;
       }
       @include mobile {
-        font-size: 25px;
+        font-size: 18px;
       }
       @media screen and (max-height: 380px) {
-        font-size: 22px;
+        font-size: 18px;
       }
     }
 
@@ -225,14 +225,14 @@ body {
       width: 70%;
       font-weight: 400;
       font-style: italic;
-      font-size: 28px;
+      font-size: 20px;
       margin: 100px auto;
       @include tablet {
-        font-size: 20px;
+        font-size: 18px;
         margin: 60px auto;
       }
       @include mobile {
-        font-size: 17px;
+        font-size: 16px;
         margin: 60px auto;
       }
     }
@@ -245,13 +245,13 @@ body {
 
       h1 {
         font-weight: 700;
-        font-size: 68px;
+        font-size: 34px;
         @include tablet {
           font-size: 50px;
           margin: 20px auto;
         }
         @include mobile {
-          font-size: 40px;
+          font-size: 20px;
           margin: 20px auto;
         }
 
@@ -289,10 +289,10 @@ body {
       text-align: center;
       list-style: decimal;
       margin: 100px auto;
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 500;
       @include tablet {
-        font-size: 25px;
+        font-size: 18px;
         margin: 50px auto;
       }
       @include mobile {
@@ -333,29 +333,29 @@ body {
 
         h1 {
           z-index: 10;
-          font-size: 80px;
+          font-size: 40px;
           transform: translateX(-60px);
           margin: 7px auto;
           @include tablet {
-            font-size: 55px;
+            font-size: 27px;
             transform: translateX(-20px);
           }
           @include mobile {
-            font-size: 35px;
+            font-size: 24px;
             transform: translateX(-30px);
           }
         }
 
         h2 {
           z-index: 10;
-          font-size: 50px;
+          font-size: 25px;
           transform: translateX(-30px);
           margin: 5px auto;
           @include tablet {
-            font-size: 40px;
+            font-size: 20px;
           }
           @include mobile {
-            font-size: 20px;
+            font-size: 18px;
             transform: translateX(-15px);
           }
         }
@@ -363,10 +363,10 @@ body {
         h3 {
           z-index: 10;
           text-align: center;
-          font-size: 25px;
+          font-size: 20px;
           margin: 3px auto;
           @include tablet {
-            font-size: 20px;
+            font-size: 16px;
           }
           @include mobile {
             font-size: 10px;
@@ -448,7 +448,7 @@ body {
   & p {
     font-style: italic;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 20px;
     margin: 30px 0px;
     @include mobile {
       cursor: auto;
