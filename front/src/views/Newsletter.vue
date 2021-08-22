@@ -186,7 +186,6 @@ body {
       z-index: 1;
       margin-left: 5%;
       margin-top: 2vh;
-      margin-bottom: 20px;
       transform: translateX(-30px);
       @include tablet {
         width: 100px;
@@ -331,13 +330,12 @@ body {
         height: 100%;
         padding: 7vh 0 20vh 0;
         position: relative;
-        background-color: #fff;
-        color: $bg-black;
+        color: #000;
         h1 {
           z-index: 10;
           font-size: 40px;
           margin: 5px auto;
-          font-weight: 200;
+          font-weight: 100;
           @include tablet {
             font-size: 27px;
           }

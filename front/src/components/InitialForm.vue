@@ -29,7 +29,7 @@
         id="submitNewsletter"
         type="submit"
         class="submit-button"
-        content="Dołącz !"
+        content="Wyślij"
         :value="sumbitValue"
       >
     </form>
@@ -48,7 +48,7 @@ export default {
         email: '',
         name: '',
       },
-      sumbitValue: 'Wyślij',
+      sumbitValue: 'Dołącz !',
       errorValue: '',
     };
   },
