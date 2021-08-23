@@ -88,7 +88,6 @@ export default {
     border-radius: 130px;
     margin: 0 auto;
     height: 220px;
-    transform: translateY(-100px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,9 +96,6 @@ export default {
     }
     @include mobile{
       border-radius: 80px;
-    }
-    @media screen and (max-height: 360px) {
-      transform: translateY(-50px);
     }
     .data-inputs{
         width: 90vw;
@@ -151,7 +147,7 @@ export default {
       border-radius: 70px;
       color: white;
       font-weight: 700;
-      letter-spacing: 4px;
+      letter-spacing: 1px;
       font-size: 17px;
       cursor: pointer;
       transition: all 0.3s ease-in;

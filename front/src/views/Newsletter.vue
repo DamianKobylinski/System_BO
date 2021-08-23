@@ -21,11 +21,15 @@
     <section id="about-us">
       <h3>
         Botakmam to grupa osób współdziałających ze sobą przy organizacji i realizacji
-        wieloletniego projektu dla przedsiębiorców i osób indywidualnych
+        wieloletniego projektu dla przedsiębiorców i osób indywidualnych.
       </h3>
       <div class="main-title">
-        <h1>Tworzymy <span>nowe</span> możliwości!</h1>
-<!--        <div class="circle"/>-->
+        <h1>
+          Tworzymy
+          <span>nowe</span>
+          możliwości!
+          <div class="circle"/>
+          </h1>
       </div>
       <ol>
         <li>
@@ -53,12 +57,12 @@
     <section id="newsletter">
       <div class="register-info-wrapper">
         <div class="register-info">
-          <h1>Zainteresowany?</h1>
-          <h2>Poznaj nasz projekt</h2>
-          <h3>
-            Dokonaj rejestracji <br>
-            Wypełnij formularz otrzymasz więcej informacji
-          </h3>
+          <h1>
+            Zainteresowany?<br>
+            Poznaj nasz projekt.
+            Dokonaj rejestracji.
+            Wypełnij formularz otrzymasz więcej informacji.
+          </h1>
 <!--          <div class="circle"/>-->
         </div>
         <InitialForm/>
@@ -143,7 +147,7 @@ body {
       margin-left: 5%;
       margin-bottom: 1vh;
       font-weight: 400;
-      letter-spacing: 5px;
+      letter-spacing: 1px;
       span {
         color: $red;
       }
@@ -168,7 +172,7 @@ body {
       margin-left: 5%;
       margin-top: 7px;
       font-weight: 200;
-      letter-spacing: 5px;
+      letter-spacing: 1px;
       @include tablet {
         font-size: 20px;
       }
@@ -194,8 +198,8 @@ body {
         margin-bottom: 2.5vh;
       }
       @media screen and (max-height: 380px) {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
     }
 
@@ -217,12 +221,13 @@ body {
     width: 100vw;
     overflow: hidden;
     font-weight: 200;
+    padding: 2vh 0;
     h3 {
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      width: 70%;
+      width: 50%;
       font-weight: 200;
       font-style: italic;
       font-size: 20px;
@@ -230,54 +235,49 @@ body {
       @include tablet {
         font-size: 18px;
         margin: 60px auto;
+        width: 70%;
       }
       @include mobile {
         font-size: 16px;
         margin: 60px auto;
+        width: 90%;
       }
     }
 
     .main-title {
-      width: 100%;
-      position: relative;
-      margin: 40px auto;
-      text-align: center;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
       h1 {
-        font-weight: 200;
+        font-weight: 400;
         font-size: 28px;
-        margin: 20px auto;
+        position: relative;
+        text-align: center;
         @include tablet {
-          font-size: 50px;
-          margin: 20px auto;
+          font-size: 20px;
         }
         @include mobile {
-          font-size: 20px;
-          margin: 20px auto;
+          font-size: 18px;
         }
-
-      }
-
       .circle {
-        width: 168px;
-        height: 168px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
         background-color: $red;
         position: absolute;
         z-index: -1;
-        left: 20%;
-        top: -40px;
+        left: -20px;
+        top: -30px;
         @include tablet {
-          width: 100px;
-          height: 100px;
-          top: -20px;
+          width: 80px;
+          height: 80px;
         }
         @include mobile {
           width: 50px;
           height: 50px;
-          top: 0;
-          left: 45px;
+          top: -15px;
         }
+      }
       }
 
       span {
@@ -286,7 +286,7 @@ body {
     }
 
     ol {
-      width: 70%;
+      width: 60%;
       text-align: center;
       list-style: decimal;
       margin: 100px auto;
@@ -295,6 +295,7 @@ body {
       @include tablet {
         font-size: 18px;
         margin: 50px auto;
+        width: 70%;
       }
       @include mobile {
         font-size: 16px;
@@ -320,6 +321,7 @@ body {
       color: white;
       font-weight: 200;
       font-style: italic;
+      padding: 5vh 0;
 
       .register-info {
         display: flex;
@@ -328,49 +330,23 @@ body {
         flex-direction: column;
         width: 100%;
         height: 100%;
-        padding: 7vh 0 20vh 0;
+        padding: 2vh 0 8vh 0;
         position: relative;
         color: #000;
         h1 {
           z-index: 10;
-          font-size: 40px;
-          margin: 5px auto;
-          font-weight: 100;
-          @include tablet {
-            font-size: 27px;
-          }
-          @include mobile {
-            font-size: 24px;
-          }
-        }
-
-        h2 {
-          z-index: 10;
-          font-size: 25px;
-          margin: 5px auto;
-          font-weight: 200;
-          @include tablet {
-            font-size: 20px;
-          }
-          @include mobile {
-            font-size: 18px;
-          }
-        }
-
-        h3 {
-          z-index: 10;
+          font-size: 30px;
           text-align: center;
-          font-size: 20px;
-          margin: 3px auto;
           font-weight: 200;
+          width: 70%;
+          word-spacing: 2px;
           @include tablet {
-            font-size: 16px;
+            font-size: 22px;
           }
           @include mobile {
-            font-size: 10px;
+            font-size: 19px;
           }
         }
-
         .circle {
           width: 168px;
           height: 168px;
@@ -383,17 +359,10 @@ body {
           @include tablet {
             width: 100px;
             height: 100px;
-            left: 13vw;
-            top: 24%;
           }
           @include mobile {
             width: 50px;
             height: 50px;
-            left: 7vw;
-            top: 27%;
-          }
-          @media screen and (max-height: 360px) {
-            top: 19%;
           }
         }
       }
