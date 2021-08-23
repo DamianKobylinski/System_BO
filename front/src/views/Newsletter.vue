@@ -62,8 +62,8 @@
             Poznaj nasz projekt.
             Dokonaj rejestracji.
             Wypełnij formularz otrzymasz więcej informacji.
-            <div class="circle"/>
           </h1>
+          <div class="circle"/>
         </div>
         <InitialForm/>
       </div>
@@ -331,6 +331,7 @@ body {
         width: 100%;
         height: 100%;
         padding: 2vh 0 8vh 0;
+        position: relative;
         color: #000;
         h1 {
           z-index: 10;
@@ -339,32 +340,29 @@ body {
           font-weight: 200;
           width: 70%;
           word-spacing: 2px;
-          position: relative;
           @include tablet {
             font-size: 22px;
           }
           @include mobile {
             font-size: 19px;
           }
-          .circle {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            background-color: $red;
-            position: absolute;
-            z-index: -1;
-            left: 30%;
-            top: -15px;
-            @include tablet {
-              width: 100px;
-              height: 100px;
-            }
-            @include mobile {
-              width: 70px;
-              height: 70px;
-              top: 0;
-              left: 20%;
-            }
+        }
+        .circle {
+          width: 168px;
+          height: 168px;
+          border-radius: 50%;
+          background-color: $red;
+          position: absolute;
+          z-index: 1;
+          left: 26vw;
+          top: 5%;
+          @include tablet {
+            width: 100px;
+            height: 100px;
+          }
+          @include mobile {
+            width: 50px;
+            height: 50px;
           }
         }
       }
