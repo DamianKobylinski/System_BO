@@ -63,7 +63,7 @@
             Dokonaj rejestracji.
             Wypełnij formularz otrzymasz więcej informacji.
           </h1>
-<!--          <div class="circle"/>-->
+          <div class="circle"/>
         </div>
         <InitialForm/>
       </div>
