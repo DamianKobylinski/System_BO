@@ -117,7 +117,7 @@ body {
   // Landing Section
   #landing {
     width: 100%;
-    height: 60vh;
+    height: 75vh;
     overflow: hidden;
     position: relative;
 

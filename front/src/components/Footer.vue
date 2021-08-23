@@ -100,7 +100,7 @@ export default {
             margin: 0 15px;
           }
         img {
-          margin-top: 25px;
+          margin-top: 20px;
           height: 30px;
           width: 30px;
         }
