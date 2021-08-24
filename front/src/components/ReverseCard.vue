@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 .reverse-card-wrapper {
     width: 250px;
-    height: 350px;
+    height: 330px;
     background-color: #252525;
     box-shadow: 0px 6px 8px 5px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
@@ -77,7 +77,7 @@ export default {
                     margin-bottom: 30px;
                 }
                 p {
-                    font-size: 1.5rem;
+                    font-size: 1.3rem;
                 }
             }
         }

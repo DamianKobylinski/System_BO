@@ -64,7 +64,7 @@ export default {
       width: 45%;
       color: white;
       padding: 0 30px;
-      font-size: 1.2rem;
+      font-size: 1rem;
       @include tablet {
         width: 80%;
       }
