@@ -138,7 +138,7 @@ export default {
     },
     toggleAdditionalQuestions() {
       this.showAdditionalQuestions = !this.showAdditionalQuestions;
-      console.log(this.rodoCheck);
+      // console.log(this.rodoCheck);
     },
     async submitForm() {
       if (this.rodoCheck.length <= 0) {
@@ -161,7 +161,7 @@ export default {
 
 <style lang="scss" scoped>
 .form-wrapper {
-  width: 85%;
+  width: 75%;
   background-color: white;
   box-shadow: 0px 0px 61px 23px rgba(0, 0, 0, 0.5);
   border-radius: 120px;
@@ -169,7 +169,7 @@ export default {
   transform: translateY(-100px);
   padding: 80px 0;
   transition: 0.5s ease all;
-  @include mobile {
+  @include tablet {
     width: 95%;
     border-radius: 90px;
   }
@@ -202,9 +202,9 @@ export default {
 
       h1 {
         font-weight: 600;
-        font-size: 3.2rem;
+        font-size: 2.7rem;
         @include mobile {
-          font-size: 2.6rem;
+          font-size: 2.3rem;
         }
 
         span {
@@ -214,8 +214,8 @@ export default {
     }
 
     p {
-      font-weight: 500;
-      font-size: 1.9rem;
+      font-weight: 400;
+      font-size: 1.5rem;
       position: relative;
       margin-bottom: 50px;
       color: $bg-black;
@@ -314,13 +314,13 @@ export default {
     justify-content: center;
     color: white;
     margin: 50px auto;
-    width: 190px;
-    height: 70px;
+    width: 160px;
+    height: 60px;
     border: none;
     background-color: $red;
     border-radius: 24px;
     box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.35);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
 
     &:hover {

@@ -458,7 +458,7 @@ export default {
         font-size: 60px;
       }
       p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-top: 20px;
         color: $red;
         font-weight: 500;
@@ -481,14 +481,14 @@ export default {
   padding: 0 0 70px 0;
   h1 {
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 100px 0;
     width: 80%;
     @include tablet {
-      font-size: 3.5rem;
+      font-size: 2.8rem;
     }
     @include mobile {
-      font-size: 3rem;
+      font-size: 2rem;
     }
     span {
       color: $red;
@@ -516,31 +516,31 @@ export default {
   flex-direction: column;
   text-align: center;
   h1 {
-    font-size: 3.3rem;
+    font-size: 3rem;
     color: $red;
     margin-bottom: 70px;
     font-weight: 600;
     @include mobile {
-      font-size: 2.7rem;
+      font-size: 2.5rem;
     }
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 80px;
     padding: 0 30px;
     @include mobile {
-      font-size: 1.7rem;
+      font-size: 1.1rem;
     }
 
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     padding: 0 20vw;
     margin-bottom: 40px;
     @include mobile {
-      font-size: 1rem;
+      font-size: 0.85rem;
       padding: 0 20px;
     }
   }
