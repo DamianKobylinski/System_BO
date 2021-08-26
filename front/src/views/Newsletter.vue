@@ -2,6 +2,24 @@
   <div id="newsletter-wrapper">
     <!-- Landing Page Section -->
     <section id="landing">
+      <vue-particles
+        color="#ffffff"
+        :particleOpacity="0.7"
+        :particlesNumber="130"
+        shapeType="circle"
+        :particleSize="2"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
       <img
         class="logo"
         src="@/assets/img/logo.svg"
@@ -16,6 +34,7 @@
         src="@/assets/img/woman.png"
         alt=""
       >
+
     </section>
     <!-- About Us Section -->
     <section id="about-us">
@@ -124,7 +143,14 @@ body {
     height: 75vh;
     overflow: hidden;
     position: relative;
-
+    background: $bg-black;
+    z-index: 10;
+    & #particles-js{
+      position: absolute;
+      width: 100%;
+      height: 75vh;
+      z-index: 1;
+    }
     &::before {
       background: $bg-black;
       overflow: hidden;
