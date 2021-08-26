@@ -37,16 +37,19 @@ export default {
   margin-top: 150px;
   .icon {
     color: $red;
-    font-size: 60px;
+    font-size: 50px;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 30px;
     font-weight: 600;
     padding: 0 10px;
+    @include mobile {
+      font-size: 1.4rem;
+    }
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 25px;
     width: 50%;
     font-weight: 500;
@@ -55,6 +58,7 @@ export default {
     }
     @include mobile {
       width: 90%;
+      font-size: 0.8rem;
     }
   }
 }

@@ -297,7 +297,7 @@ export default {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     .logo {
       width: 200px;
       height: 200px;
@@ -313,7 +313,7 @@ export default {
     }
     h1 {
       margin-top: 20px;
-      font-size: 5rem;
+      font-size: 4rem;
       color: $red;
       @include tablet {
         font-size: 3.5rem;
@@ -326,9 +326,10 @@ export default {
       }
     }
     p {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       padding: 0 10%;
       margin-top: 20px;
+      font-weight: 400;
       @include tablet {
         font-size: 1rem;
       }
@@ -337,9 +338,10 @@ export default {
       }
     }
     h2 {
-      font-size: 3rem;
+      font-size: 2.4rem;
       margin-top: 30px;
       padding: 0 5px;
+      font-weight: 400;
       @include tablet {
         font-size: 2rem;
       }
@@ -370,7 +372,7 @@ export default {
     flex-direction: column;
     text-align: center;
     h1 {
-      font-size: 3rem;
+      font-size: 2.7rem;
       padding: 80px 0 20px 0;
       font-weight: 600;
       @include tablet {
@@ -384,7 +386,7 @@ export default {
       }
     }
     .short-info {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 600;
       width: 50%;
       margin-top: 50px;
@@ -399,7 +401,7 @@ export default {
     }
     .long-info {
       font-weight: 500;
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin-top: 70px;
       margin-bottom: 100px;
       width: 60%;
@@ -456,7 +458,7 @@ export default {
         font-size: 60px;
       }
       p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-top: 20px;
         color: $red;
         font-weight: 500;
@@ -479,14 +481,14 @@ export default {
   padding: 0 0 70px 0;
   h1 {
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 100px 0;
     width: 80%;
     @include tablet {
-      font-size: 3.5rem;
+      font-size: 2.8rem;
     }
     @include mobile {
-      font-size: 3rem;
+      font-size: 2rem;
     }
     span {
       color: $red;
@@ -514,31 +516,31 @@ export default {
   flex-direction: column;
   text-align: center;
   h1 {
-    font-size: 3.3rem;
+    font-size: 3rem;
     color: $red;
     margin-bottom: 70px;
     font-weight: 600;
     @include mobile {
-      font-size: 2.7rem;
+      font-size: 2.5rem;
     }
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 80px;
     padding: 0 30px;
     @include mobile {
-      font-size: 1.7rem;
+      font-size: 1.1rem;
     }
 
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     padding: 0 20vw;
     margin-bottom: 40px;
     @include mobile {
-      font-size: 1rem;
+      font-size: 0.85rem;
       padding: 0 20px;
     }
   }

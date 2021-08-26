@@ -53,28 +53,28 @@ export default {
   .footer-wrapper {
     background: $bg-black;
     width: 100vw;
-    height: 300px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
     .footer-logo {
-      width: 87px;
-      height: 127px
+      width: 57px;
+      height: 67px
     }
     p {
       color: #fff;
       text-align: center;
+      font-weight: 200;
     }
     .copyrights {
-      margin-top: 50px;
       z-index: 1;
       padding: 0 10px 10px 10px;
-      margin: 30px 10px 0 0;
+      margin: 40px 10px 0 0;
      }
     .social-div {
       width: 75%;
-      height: 50px;
+      height: 25px;
       color: white;
       display: flex;
       flex-direction: row;
@@ -85,7 +85,7 @@ export default {
         z-index: 1;
         width: 50px;
         height: 100%;
-        margin: 0 50px;
+        margin: 20px 50px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -100,8 +100,9 @@ export default {
             margin: 0 15px;
           }
         img {
-          height: 50px;
-          width: 50px;
+          margin-top: 20px;
+          height: 30px;
+          width: 30px;
         }
       }
   }

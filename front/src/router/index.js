@@ -1,22 +1,16 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import Newsletter from '../views/Newsletter.vue';
-import MainForm from '../views/MainForm.vue';
-import AdminPanelLogin from '../views/AdminPanelLogin.vue';
-import AdminPanel from '../views/AdminPanel.vue';
-import ThankYou from '../views/ThankYou.vue';
-import PageNotFound from '../views/PageNotFound.vue';
 import store from '../store';
 
 const routes = [
   {
     path: '/',
     name: 'Newsletter',
-    component: Newsletter,
+    component: () => import(/* webpackChunkName: "newsletter" */ '../views/Newsletter.vue'),
   },
   {
     path: '/form',
     name: 'MainForm',
-    component: MainForm,
+    component: () => import(/* webpackChunkName: "mainform" */ '../views/MainForm.vue'),
     beforeEnter: (to, from, next) => {
       if (store.state.isInDatabase) {
         next();
@@ -28,12 +22,12 @@ const routes = [
   {
     path: '/admin-login',
     name: 'AdminPanelLogin',
-    component: AdminPanelLogin,
+    component: () => import(/* webpackChunkName: "adminpanellogin" */ '../views/AdminPanelLogin.vue'),
   },
   {
     path: '/admin-panel',
     name: 'AdminPanel',
-    component: AdminPanel,
+    component: () => import(/* webpackChunkName: "adminpanel" */ '../views/AdminPanel.vue'),
     beforeEnter: (to, from, next) => {
       if (store.state.isAdminSuccessLogin) {
         next();
@@ -45,7 +39,7 @@ const routes = [
   {
     path: '/thankyou',
     name: 'ThankYou',
-    component: ThankYou,
+    component: () => import(/* webpackChunkName: "thankyou" */ '../views/ThankYou.vue'),
     beforeEnter: (to, from, next) => {
       if (store.state.isFormSent) {
         next();
@@ -57,7 +51,7 @@ const routes = [
   {
     path: '/:catchAll(.*)',
     name: 'PageNotFound',
-    component: PageNotFound,
+    component: () => import(/* webpackChunkName: "pagenotfound" */ '../views/PageNotFound.vue'),
   },
 ];
 

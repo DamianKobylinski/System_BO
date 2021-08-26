@@ -7,11 +7,12 @@
         <input
           id="emailFormNewsletter"
           v-model="inputValues.email"
-          type="text"
+          type="email"
           placeholder="e-mail"
           class="email"
           maxlength="50"
           @change="valueChanged"
+          required
         >
         <input
           id="nameFormNewsletter"
@@ -21,6 +22,7 @@
           class="name"
           maxlength="60"
           @change="valueChanged"
+          required
         >
       </div>
       <input
@@ -31,11 +33,12 @@
         :value="sumbitValue"
       >
     </form>
+    <p class="errorInfo">{{ errorValue }}</p>
   </div>
 </template>
 
 <script>
-const API = 'https://botakmam.herokuapp.com';
+const API = 'https://hidden-waters-71562.herokuapp.com/';
 
 export default {
   name: 'InitialForm',
@@ -45,7 +48,8 @@ export default {
         email: '',
         name: '',
       },
-      sumbitValue: 'Wyślij',
+      sumbitValue: 'Dołącz !',
+      errorValue: '',
     };
   },
   mounted() {
@@ -66,7 +70,7 @@ export default {
           this.$router.push('/form');
         })
         .catch((error) => {
-          console.log(error);
+          this.errorValue = error.message;
         });
     },
     valueChanged() {
@@ -78,13 +82,12 @@ export default {
 
 <style lang="scss" scoped>
 .form-wrapper{
-    width: 90vw;
+    width: 80vw;
     background-color: white;
-    box-shadow: 0px 4px 25px 6px #000000;
+    //box-shadow: 0px 4px 25px 6px #000000;
     border-radius: 130px;
     margin: 0 auto;
-    height: 300px;
-    transform: translateY(-100px);
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,9 +96,6 @@ export default {
     }
     @include mobile{
       border-radius: 80px;
-    }
-    @media screen and (max-height: 360px) {
-      transform: translateY(-50px);
     }
     .data-inputs{
         width: 90vw;
@@ -139,8 +139,7 @@ export default {
       display: flex;
       align-content: center;
       justify-content: center;
-      margin: 0 auto;
-      margin-top: 38px;
+      margin: 50px auto;
       border: none;
       background-color: $red;
       width: 170px;
@@ -148,6 +147,7 @@ export default {
       border-radius: 70px;
       color: white;
       font-weight: 700;
+      letter-spacing: 1px;
       font-size: 17px;
       cursor: pointer;
       transition: all 0.3s ease-in;
@@ -161,5 +161,14 @@ export default {
         cursor: auto;
       }
     }
+}
+.errorInfo {
+  font-size: 0.7rem;
+  color: $red;
+  position: absolute;
+  bottom: 15px;
+  @include mobile {
+    font-size: 0.5rem;
+  }
 }
 </style>

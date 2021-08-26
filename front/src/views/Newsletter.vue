@@ -2,6 +2,24 @@
   <div id="newsletter-wrapper">
     <!-- Landing Page Section -->
     <section id="landing">
+      <vue-particles
+        color="#ffffff"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="2"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
       <img
         class="logo"
         src="@/assets/img/logo.svg"
@@ -16,16 +34,21 @@
         src="@/assets/img/woman.png"
         alt=""
       >
+
     </section>
     <!-- About Us Section -->
     <section id="about-us">
       <h3>
         Botakmam to grupa osób współdziałających ze sobą przy organizacji i realizacji
-        wieloletniego projektu dla przedsiębiorców i osób indywidualnych
+        wieloletniego projektu dla przedsiębiorców i osób indywidualnych.
       </h3>
       <div class="main-title">
-        <h1>Tworzymy <span>nowe</span> możliwości!</h1>
-        <div class="circle"/>
+        <h1>
+          Tworzymy
+          <span>nowe</span>
+          możliwości!
+          <div class="circle"/>
+          </h1>
       </div>
       <ol>
         <li>
@@ -53,13 +76,13 @@
     <section id="newsletter">
       <div class="register-info-wrapper">
         <div class="register-info">
-          <h1>Zainteresowany?</h1>
-          <h2>Poznaj nasz projekt</h2>
-          <h3>
-            Dokonaj rejestracji <br>
-            Wypełnij formularz otrzymasz więcej informacji
-          </h3>
-          <div class="circle"/>
+          <h1>
+            Zainteresowany?<br>
+            Poznaj nasz projekt.
+            Dokonaj rejestracji.
+            Wypełnij formularz otrzymasz więcej informacji.
+            <div class="circle"/>
+          </h1>
         </div>
         <InitialForm/>
       </div>
@@ -85,8 +108,10 @@ export default {
     Footer,
   },
   mounted() {
-    if (localStorage.getItem('cookiesAccept')) {
+    if (localStorage.getItem('cookiesAccept') === 'true') {
       this.$refs['cookie-law'].style.display = 'none';
+    } else {
+      this.$refs['cookie-law'].style.display = 'flex';
     }
   },
   methods: {
@@ -117,10 +142,17 @@ body {
   // Landing Section
   #landing {
     width: 100%;
-    height: 100vh;
+    height: 75vh;
     overflow: hidden;
     position: relative;
-
+    background: $bg-black;
+    z-index: 10;
+    & #particles-js{
+      position: absolute;
+      width: 100%;
+      height: 75vh;
+      z-index: 1;
+    }
     &::before {
       background: $bg-black;
       overflow: hidden;
@@ -139,43 +171,44 @@ body {
 
     h1 {
       color: white;
-      font-size: 100px;
+      font-size: 50px;
       margin-left: 5%;
-      font-weight: 700;
       margin-bottom: 1vh;
-
+      font-weight: 400;
+      letter-spacing: 1px;
       span {
         color: $red;
       }
 
       @include tablet {
-        font-size: 70px;
+        font-size: 45px;
         margin-bottom: 1vh;
       }
       @include mobile {
-        font-size: 50px;
+        font-size: 35px;
         margin-bottom: 1vh;
       }
       @media screen and (max-height: 380px) {
-        font-size: 49px;
+        font-size: 25px;
       }
     }
 
     h2 {
       color: white;
       font-style: italic;
-      font-weight: 400;
-      font-size: 50px;
+      font-size: 25px;
       margin-left: 5%;
-      margin-top: 3px;
+      margin-top: 7px;
+      font-weight: 200;
+      letter-spacing: 1px;
       @include tablet {
-        font-size: 35px;
+        font-size: 20px;
       }
       @include mobile {
-        font-size: 25px;
+        font-size: 18px;
       }
       @media screen and (max-height: 380px) {
-        font-size: 22px;
+        font-size: 18px;
       }
     }
 
@@ -185,7 +218,6 @@ body {
       z-index: 1;
       margin-left: 5%;
       margin-top: 2vh;
-      margin-bottom: 20px;
       transform: translateX(-30px);
       @include tablet {
         width: 100px;
@@ -194,17 +226,17 @@ body {
         margin-bottom: 2.5vh;
       }
       @media screen and (max-height: 380px) {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
     }
 
     .woman {
-      width: 35vw;
-      height: auto;
+      width: 400px;
+      height: 500px;
       position: absolute;
-      bottom: -20px;
-      right: 0;
+      bottom: -30px;
+      right: 50px;
       object-fit: cover;
       @include large-tablet {
         display: none;
@@ -216,67 +248,64 @@ body {
   #about-us {
     width: 100vw;
     overflow: hidden;
-
+    font-weight: 200;
+    padding: 2vh 0;
     h3 {
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      width: 70%;
-      font-weight: 400;
+      width: 50%;
+      font-weight: 200;
       font-style: italic;
-      font-size: 28px;
+      font-size: 20px;
       margin: 100px auto;
       @include tablet {
-        font-size: 20px;
+        font-size: 18px;
         margin: 60px auto;
+        width: 70%;
       }
       @include mobile {
-        font-size: 17px;
+        font-size: 16px;
         margin: 60px auto;
+        width: 90%;
       }
     }
 
     .main-title {
-      width: 100%;
-      position: relative;
-      margin: 40px auto;
-      text-align: center;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
       h1 {
-        font-weight: 700;
-        font-size: 68px;
+        font-weight: 400;
+        font-size: 28px;
+        position: relative;
+        text-align: center;
         @include tablet {
-          font-size: 50px;
-          margin: 20px auto;
+          font-size: 20px;
         }
         @include mobile {
-          font-size: 40px;
-          margin: 20px auto;
+          font-size: 18px;
         }
-
-      }
-
       .circle {
-        width: 168px;
-        height: 168px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
         background-color: $red;
         position: absolute;
         z-index: -1;
-        left: 20%;
-        top: -40px;
+        left: -20px;
+        top: -30px;
         @include tablet {
-          width: 100px;
-          height: 100px;
-          top: -20px;
+          width: 80px;
+          height: 80px;
         }
         @include mobile {
           width: 50px;
           height: 50px;
-          top: 0;
-          left: 45px;
+          top: -15px;
         }
+      }
       }
 
       span {
@@ -285,15 +314,16 @@ body {
     }
 
     ol {
-      width: 70%;
+      width: 60%;
       text-align: center;
       list-style: decimal;
       margin: 100px auto;
-      font-size: 28px;
-      font-weight: 500;
+      font-size: 20px;
+      font-weight: 200;
       @include tablet {
-        font-size: 25px;
+        font-size: 18px;
         margin: 50px auto;
+        width: 70%;
       }
       @include mobile {
         font-size: 16px;
@@ -317,8 +347,9 @@ body {
     .register-info-wrapper {
       height: auto;
       color: white;
-      font-weight: 700;
+      font-weight: 200;
       font-style: italic;
+      padding: 5vh 0;
 
       .register-info {
         display: flex;
@@ -327,75 +358,41 @@ body {
         flex-direction: column;
         width: 100%;
         height: 100%;
-        padding: 13vh 0 20vh 0;
-        position: relative;
-        background-color: $bg-black;
-
+        padding: 2vh 0 8vh 0;
+        color: #000;
         h1 {
           z-index: 10;
-          font-size: 80px;
-          transform: translateX(-60px);
-          margin: 7px auto;
-          @include tablet {
-            font-size: 55px;
-            transform: translateX(-20px);
-          }
-          @include mobile {
-            font-size: 35px;
-            transform: translateX(-30px);
-          }
-        }
-
-        h2 {
-          z-index: 10;
-          font-size: 50px;
-          transform: translateX(-30px);
-          margin: 5px auto;
-          @include tablet {
-            font-size: 40px;
-          }
-          @include mobile {
-            font-size: 20px;
-            transform: translateX(-15px);
-          }
-        }
-
-        h3 {
-          z-index: 10;
+          font-size: 30px;
           text-align: center;
-          font-size: 25px;
-          margin: 3px auto;
+          font-weight: 200;
+          width: 70%;
+          word-spacing: 2px;
+          position: relative;
           @include tablet {
-            font-size: 20px;
+            font-size: 22px;
           }
           @include mobile {
-            font-size: 10px;
+            font-size: 19px;
           }
-        }
-
-        .circle {
-          width: 168px;
-          height: 168px;
-          border-radius: 50%;
-          background-color: $red;
-          position: absolute;
-          z-index: 1;
-          left: 26vw;
-          top: 17%;
-          @include tablet {
-            width: 100px;
-            height: 100px;
-            left: 15vw;
-            top: 24%;
-          }
-          @include mobile {
-            width: 50px;
-            height: 50px;
-            left: 7vw;
-            top: 27%;
-          }
-          @media screen and (max-height: 360px) {
-            top: 19%;
+          .circle {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background-color: $red;
+            position: absolute;
+            z-index: -1;
+            left: 30%;
+            top: -15px;
+            @include tablet {
+              width: 100px;
+              height: 100px;
+            }
+            @include mobile {
+              width: 70px;
+              height: 70px;
+              top: 0;
+              left: 20%;
+            }
           }
         }
       }
@@ -448,7 +445,7 @@ body {
   & p {
     font-style: italic;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 20px;
     margin: 30px 0px;
     @include mobile {
       cursor: auto;

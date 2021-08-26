@@ -79,7 +79,7 @@
 
 import axios from 'axios';
 
-const API = 'https://botakmam.herokuapp.com/admin-panel';
+const API = 'https://hidden-waters-71562.herokuapp.com/admin-panel';
 
 export default {
   name: 'AdminPanel',
