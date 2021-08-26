@@ -1,12 +1,5 @@
 <template>
   <div class="footer-wrapper">
-    <div class="logo-div">
-      <img
-        src="../assets/img/logo.svg"
-        alt="logo"
-        class="footer-logo"
-      >
-    </div>
     <div class="social-div">
       <a href="https://www.instagram.com/botakmam.pl/" target="_blank">
         <img
@@ -33,6 +26,11 @@
         >
       </a>
     </div>
+    <img
+      src="../assets/img/logo.svg"
+      alt="logo"
+      class="footer-logo"
+    >
     <div class="copyrights">
       <p>Polityka prywatności</p>
       <p>&#169; 2021&nbsp;botakmam.pl. All&nbsp;rights&nbsp;reserved</p>
@@ -53,14 +51,17 @@ export default {
   .footer-wrapper {
     background: $bg-black;
     width: 100vw;
-    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    padding: 20px 0;
+    position: relative;
     .footer-logo {
-      width: 57px;
-      height: 67px
+      width: 37px;
+      height: 47px;
+      padding: 5px;
+
     }
     p {
       color: #fff;
@@ -69,8 +70,7 @@ export default {
     }
     .copyrights {
       z-index: 1;
-      padding: 0 10px 10px 10px;
-      margin: 40px 10px 0 0;
+      padding: 0 5px;
      }
     .social-div {
       width: 75%;
@@ -81,51 +81,41 @@ export default {
       align-items: center;
       justify-content: center;
       z-index: 1;
+      margin-bottom: 20px;
        a {
         z-index: 1;
-        width: 50px;
         height: 100%;
-        margin: 20px 50px;
+        margin: 20px 40px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        padding: 10px;
         @include tablet {
-            margin: 0 25px;
-          }
-          @include large-tablet {
-            margin: 0 50px;
+            margin: 0 15px;
           }
           @include mobile {
             margin: 0 15px;
           }
         img {
           margin-top: 20px;
-          height: 30px;
-          width: 30px;
+          height: 25px;
+          width: 25px;
         }
       }
   }
       .triangle-parent{
         z-index: 0;
         width: 100%;
+        position: absolute;
         .triangle {
-        width: 0;
-        height: 0;
-        border-bottom: 1000px solid $red;
-        border-left: 1000px solid transparent;
-        position: relative;
-        float: right;
-        bottom: 150px;
-        @include large-tablet {
-          bottom: 100px;
-          }
-       @include tablet {
-          bottom: 75px;
-          }
-       @include mobile {
-          bottom: 50px;
-          }
+          width: 0;
+          height: 0;
+          border-bottom: 1000px solid $red;
+          border-left: 1000px solid transparent;
+          position: relative;
+          float: right;
+          transform: translateY(100px);
         }
       }
   }

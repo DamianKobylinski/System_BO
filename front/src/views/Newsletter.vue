@@ -146,7 +146,7 @@ body {
     overflow: hidden;
     position: relative;
     background: $bg-black;
-    z-index: 10;
+    z-index: 11;
     & #particles-js{
       position: absolute;
       width: 100%;
@@ -154,7 +154,6 @@ body {
       z-index: 1;
     }
     &::before {
-      background: $bg-black;
       overflow: hidden;
       content: "";
       position: absolute;
@@ -165,7 +164,7 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      z-index: 2;
       transform: scale(1.1);
     }
 
@@ -175,6 +174,7 @@ body {
       margin-left: 5%;
       margin-bottom: 1vh;
       font-weight: 400;
+      z-index: 10;
       letter-spacing: 1px;
       span {
         color: $red;
@@ -201,6 +201,7 @@ body {
       margin-top: 7px;
       font-weight: 200;
       letter-spacing: 1px;
+      z-index: 10;
       @include tablet {
         font-size: 20px;
       }
@@ -218,6 +219,7 @@ body {
       z-index: 1;
       margin-left: 5%;
       margin-top: 2vh;
+      z-index: 10;
       transform: translateX(-30px);
       @include tablet {
         width: 100px;
@@ -237,6 +239,7 @@ body {
       position: absolute;
       bottom: -30px;
       right: 50px;
+      z-index: 2;
       object-fit: cover;
       @include large-tablet {
         display: none;

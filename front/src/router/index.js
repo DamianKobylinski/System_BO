@@ -12,7 +12,8 @@ const routes = [
     name: 'MainForm',
     component: () => import(/* webpackChunkName: "mainform" */ '../views/MainForm.vue'),
     beforeEnter: (to, from, next) => {
-      if (store.state.isInDatabase) {
+      console.log(store.state.isInDatabase);
+      if (store.state.isInDatabase === true) {
         next();
       } else {
         next('/');

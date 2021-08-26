@@ -16,8 +16,8 @@ export default {
     }
   },
   updated() {
-    if (this.$cookies.isKey('email')) {
-      if (this.$cookies.isKey('name')) {
+    if (this.$cookies.isKey('email') === true) {
+      if (this.$cookies.isKey('name') === true) {
         this.$store.state.isInDatabase = true;
       } else {
         this.$store.state.isInDatabase = false;
