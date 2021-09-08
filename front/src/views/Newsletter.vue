@@ -31,7 +31,7 @@
       <h2>Gratyfikacja</h2>
       <img
         class="woman"
-        src="@/assets/img/woman.png"
+        src="@/assets/img/woman.webp"
         alt=""
       >
 
