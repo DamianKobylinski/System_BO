@@ -41,7 +41,7 @@
 <script>
 import axios from 'axios';
 
-const API = 'https://hidden-waters-71562.herokuapp.com/admin-login';
+const API = 'https://system-bo.vercel.app/admin-login';
 
 export default {
   name: 'AdminPanelLogin',

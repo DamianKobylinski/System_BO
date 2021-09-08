@@ -79,7 +79,7 @@
 
 import axios from 'axios';
 
-const API = 'https://hidden-waters-71562.herokuapp.com/admin-panel';
+const API = 'https://system-bo.vercel.app/admin-panel';
 
 export default {
   name: 'AdminPanel',

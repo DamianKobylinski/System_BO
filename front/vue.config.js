@@ -5,7 +5,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/': {
-        target: 'https://hidden-waters-71562.herokuapp.com/',
+        target: 'https://system-bo.vercel.app/',
       },
     },
     historyApiFallback: true,
