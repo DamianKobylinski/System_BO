@@ -161,12 +161,12 @@ export default {
 
 <style lang="scss" scoped>
 .form-wrapper {
-  width: 75%;
+  width: 70%;
   background-color: white;
   box-shadow: 0px 0px 61px 23px rgba(0, 0, 0, 0.5);
   border-radius: 120px;
   margin: 0 auto;
-  transform: translateY(-100px);
+  transform: translateY(-30px);
   padding: 80px 0;
   transition: 0.5s ease all;
   @include tablet {
@@ -179,10 +179,6 @@ export default {
     align-items: left;
     flex-direction: column;
     padding: 50px 10vw;
-    @include mobile {
-      justify-content: center;
-      align-items: center;
-    }
 
     .header-wrapper {
       display: flex;
@@ -192,19 +188,23 @@ export default {
 
       .circle {
         position: absolute;
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
         background-color: $red;
         z-index: -1;
         left: -15px;
+        @include mobile {
+          width: 50px;
+          height: 50px;
+        }
       }
 
       h1 {
         font-weight: 600;
-        font-size: 2.7rem;
+        font-size: 1.8rem;
         @include mobile {
-          font-size: 2.3rem;
+          font-size: 1.5rem;
         }
 
         span {
@@ -215,15 +215,15 @@ export default {
 
     p {
       font-weight: 400;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       position: relative;
       margin-bottom: 50px;
       color: $bg-black;
       @include tablet {
-        font-size: 1.7rem;
+        font-size: 1rem;
       }
       @include mobile {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
       }
 
       &::before {
@@ -238,11 +238,11 @@ export default {
 
     .answer-input {
       border-radius: 15px;
-      min-height: 120px;
-      padding: 20px;
+      min-height: 90px;
+      padding: 15px;
       box-sizing: border-box;
       border: 2px solid #838383;
-      font-size: 1.2rem;
+      font-size: 1rem;
       resize: none;
       overflow: hidden;
 
@@ -275,8 +275,8 @@ export default {
   .additional-question {
     margin: 0 auto;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border: 3px solid black;
     display: flex;
     align-items: center;
@@ -285,7 +285,7 @@ export default {
     transition: .4s all ease;
 
     .icon {
-      font-size: 45px;
+      font-size: 30px;
       transition: .4s all ease;
     }
 
@@ -340,6 +340,7 @@ export default {
   justify-content: center;
   align-content: center;
   margin: 50px auto;
+  font-size: 0.8rem;
   width: 80%;
 
   & input {

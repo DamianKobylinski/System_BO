@@ -175,7 +175,6 @@ body {
       margin-bottom: 1vh;
       font-weight: 400;
       z-index: 10;
-      letter-spacing: 1px;
       span {
         color: $red;
       }
@@ -365,9 +364,9 @@ body {
         color: #000;
         h1 {
           z-index: 10;
-          font-size: 30px;
+          font-weight: 400;
+          font-size: 28px;
           text-align: center;
-          font-weight: 200;
           width: 70%;
           word-spacing: 2px;
           position: relative;

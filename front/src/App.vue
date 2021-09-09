@@ -9,11 +9,15 @@
 <script>
 export default {
   mounted() {
-    if (this.$cookies.isKey('email')) {
-      if (this.$cookies.isKey('name')) {
-        this.$store.state.isInDatabase = true;
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        if (this.$cookies.isKey('email')) {
+          if (this.$cookies.isKey('name')) {
+            this.$store.state.isInDatabase = true;
+          }
+        }
       }
-    }
+    };
   },
   updated() {
     if (this.$cookies.isKey('email') === true) {
