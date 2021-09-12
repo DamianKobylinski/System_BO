@@ -52,7 +52,7 @@ export default {
     font-size: 1rem;
     margin-top: 25px;
     width: 50%;
-    font-weight: 500;
+    font-weight: 400;
     @include tablet {
       width: 85%;
     }

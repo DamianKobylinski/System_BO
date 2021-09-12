@@ -19,9 +19,9 @@
       <section id="what-is-bo-section">
         <div class="background"></div>
         <div class="info-wrapper">
-          <h1>Co to właściwie jest <span>BoTakMam</span>?</h1>
+          <h1>Co to właściwie jest <span>Bo</span>takmam?</h1>
           <p class="short-info">
-            Jako BoTakMam tworzymy rozwojową społeczność,&nbsp;która nie
+            Jako Botakmam tworzymy rozwojową społeczność,&nbsp;która nie
             chce być uzależniona od systemu narzucającego z&nbsp;góry formy
             zatrudnienia, zarobkowania i&nbsp;płatności.
           </p>
@@ -69,7 +69,7 @@
         />
       </section>
       <section id="keystones-section">
-        <h1>Filary <span>BoTakMam</span></h1>
+        <h1>Filary <span>Bo</span>takmam</h1>
         <div class="keystones-wrapper">
           <div class="keystone">
             <fa class="icon" icon="briefcase" />
@@ -130,7 +130,7 @@
         />
       </section>
       <section id="benefits-section">
-        <h1>Jako <span>BoTakMam</span> zapewniamy:</h1>
+        <h1>Jako <span>Bo</span>takmam zapewniamy:</h1>
         <div class="grid">
           <ReverseCard
             iconName="book"
@@ -188,7 +188,7 @@
             frontHeaderContent="Pomoc w realizacji powierzonych zadań"
             textContent=
             "
-            Społeczność BoTakMam to rodzina, która nigdy nie zostawi Cię
+            Społeczność Botakmam to rodzina, która nigdy nie zostawi Cię
             samego z nierozwiązanym
             problemem. Gdy otrzymasz już swoje zadanie zrobimy wszystko, aby
             udało ci się doprowadzić je do końca.
@@ -373,7 +373,7 @@ export default {
     text-align: center;
     h1 {
       font-size: 2.7rem;
-      padding: 80px 0 20px 0;
+      padding: 100px 0 20px 0;
       font-weight: 600;
       @include tablet {
         font-size: 2.5rem;
@@ -387,7 +387,7 @@ export default {
     }
     .short-info {
       font-size: 1.2rem;
-      font-weight: 600;
+      font-weight: 400;
       width: 50%;
       margin-top: 50px;
       @include tablet {
@@ -400,7 +400,7 @@ export default {
       }
     }
     .long-info {
-      font-weight: 500;
+      font-weight: 400;
       font-size: 1rem;
       margin-top: 70px;
       margin-bottom: 100px;
@@ -420,7 +420,7 @@ export default {
 
 #main-ideas-section {
   background-color: #222222;
-  padding: 100px 0 10px 0;
+  padding: 50px 0 10px 0;
 }
 #keystones-section {
   background-color: #161616;
@@ -455,7 +455,7 @@ export default {
         margin-top: 55px;
       }
       .icon {
-        font-size: 60px;
+        font-size: 50px;
       }
       p {
         font-size: 1.1rem;
@@ -478,17 +478,17 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 0 70px 0;
+  padding: 0 0 50px 0;
   h1 {
     font-weight: 600;
-    font-size: 3rem;
-    padding: 100px 0;
+    font-size: 2.2rem;
+    padding: 50px 0;
     width: 80%;
     @include tablet {
-      font-size: 2.8rem;
+      font-size: 1.9rem;
     }
     @include mobile {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     span {
       color: $red;
@@ -497,12 +497,12 @@ export default {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 170px;
+    grid-gap: 100px;
     align-items: center;
-    @media screen and (max-width: 1220px) {
+    @media screen and (max-width: 900px) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media screen and (max-width: 776px) {
+    @media screen and (max-width: 500px) {
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 70px;
     }
@@ -526,7 +526,7 @@ export default {
   }
   h2 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 80px;
     padding: 0 30px;
     @include mobile {
@@ -536,7 +536,7 @@ export default {
   }
   p {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     padding: 0 20vw;
     margin-bottom: 40px;
     @include mobile {
@@ -546,7 +546,7 @@ export default {
   }
 }
 #between-section {
-  padding: 100px 0 200px 0;
+  padding: 50px 0 110px 0;
   background-color: $bg-black;
   color: white;
   font-weight: 600;
@@ -560,8 +560,8 @@ export default {
   .circle {
     background-color: $red;
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     top: -200px;
     left: -200px;
@@ -575,11 +575,11 @@ export default {
   }
   .catch-someone-attention {
     p {
-      font-size: 5rem;
-      line-height: 80px;
+      font-size: 3.5rem;
+      line-height: 50px;
       @media screen and (max-width: 1200px) {
-        font-size: 3.5rem;
-        line-height: 50px;
+        font-size: 2rem;
+        line-height: 20px;
       }
       @media screen and (max-width: 600px) {
         font-size: 3rem;
@@ -592,9 +592,10 @@ export default {
         color: $red;
         position: relative;
         top: 30px;
-        font-size: 7rem;
+        font-size: 5rem;
         @media screen and (max-width: 1200px) {
-          font-size: 5rem;
+          font-size: 2.5rem;
+          top: 20px;
         }
         @media screen and (max-width: 600px) {
           font-size: 3.5rem;
@@ -605,12 +606,13 @@ export default {
         }
       }
       .question-mark {
-        font-size: 9rem;
+        font-size: 7rem;
         position: relative;
         top: 50px;
         padding: 0 10px;
         @media screen and (max-width: 1200px) {
-          font-size: 7rem;
+          font-size: 3.5rem;
+          top: 30px;
         }
         @media screen and (max-width: 600px) {
           font-size: 5rem;

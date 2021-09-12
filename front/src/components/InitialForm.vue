@@ -38,7 +38,7 @@
 </template>
 
 <script>
-const API = 'https://hidden-waters-71562.herokuapp.com/';
+const API = 'https://system-bo.vercel.app/';
 
 export default {
   name: 'InitialForm',

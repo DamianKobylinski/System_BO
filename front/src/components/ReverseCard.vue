@@ -38,16 +38,16 @@ export default {
 
 <style lang="scss" scoped>
 .reverse-card-wrapper {
-    width: 250px;
-    height: 330px;
+    width: 180px;
+    height: 230px;
     background-color: #252525;
     box-shadow: 0px 6px 8px 5px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     color: white;
     position: relative;
-    @media screen and (max-width: 776px) {
-      width: 70vw;
-      height: 300px;
+    @media screen and (max-width: 500px) {
+      width: 60vw;
+      height: 150px;
     }
     .card:hover {
         transform: rotateY(180deg);
@@ -73,11 +73,11 @@ export default {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 .icon {
-                    font-size: 70px;
-                    margin-bottom: 30px;
+                    font-size: 40px;
+                    margin-bottom: 20px;
                 }
                 p {
-                    font-size: 1.3rem;
+                    font-size: 1rem;
                 }
             }
         }
@@ -91,10 +91,11 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 17px;
+            font-size: 13px;
             transform: rotateY(180deg);
             p {
-                padding: 20px;
+                font-weight: 400;
+                padding: 12px;
             }
         }
     }

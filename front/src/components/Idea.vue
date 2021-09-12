@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .idea-wrapper {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     margin-left: 3%;
     margin-right: 3%;
     display: flex;

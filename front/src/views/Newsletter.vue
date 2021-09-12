@@ -31,7 +31,7 @@
       <h2>Gratyfikacja</h2>
       <img
         class="woman"
-        src="@/assets/img/woman.png"
+        src="@/assets/img/woman.webp"
         alt=""
       >
 
@@ -146,7 +146,7 @@ body {
     overflow: hidden;
     position: relative;
     background: $bg-black;
-    z-index: 10;
+    z-index: 11;
     & #particles-js{
       position: absolute;
       width: 100%;
@@ -154,7 +154,6 @@ body {
       z-index: 1;
     }
     &::before {
-      background: $bg-black;
       overflow: hidden;
       content: "";
       position: absolute;
@@ -165,7 +164,7 @@ body {
       background-position: center;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      z-index: 2;
       transform: scale(1.1);
     }
 
@@ -175,7 +174,7 @@ body {
       margin-left: 5%;
       margin-bottom: 1vh;
       font-weight: 400;
-      letter-spacing: 1px;
+      z-index: 10;
       span {
         color: $red;
       }
@@ -201,6 +200,7 @@ body {
       margin-top: 7px;
       font-weight: 200;
       letter-spacing: 1px;
+      z-index: 10;
       @include tablet {
         font-size: 20px;
       }
@@ -218,6 +218,7 @@ body {
       z-index: 1;
       margin-left: 5%;
       margin-top: 2vh;
+      z-index: 10;
       transform: translateX(-30px);
       @include tablet {
         width: 100px;
@@ -237,6 +238,7 @@ body {
       position: absolute;
       bottom: -30px;
       right: 50px;
+      z-index: 2;
       object-fit: cover;
       @include large-tablet {
         display: none;
@@ -362,9 +364,9 @@ body {
         color: #000;
         h1 {
           z-index: 10;
-          font-size: 30px;
+          font-weight: 400;
+          font-size: 28px;
           text-align: center;
-          font-weight: 200;
           width: 70%;
           word-spacing: 2px;
           position: relative;
