@@ -32,8 +32,8 @@
         content="Wyślij"
         :value="sumbitValue"
       >
+      <p class="errorInfo">{{ errorValue }}</p>
     </form>
-    <p class="errorInfo">{{ errorValue }}</p>
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
         email: '',
         name: '',
       },
-      sumbitValue: 'Dołącz !',
+      sumbitValue: 'Dołącz!',
       errorValue: '',
     };
   },
@@ -139,7 +139,7 @@ export default {
       display: flex;
       align-content: center;
       justify-content: center;
-      margin: 50px auto;
+      margin: 20px auto;
       border: none;
       background-color: $red;
       width: 170px;
@@ -165,8 +165,8 @@ export default {
 .errorInfo {
   font-size: 0.7rem;
   color: $red;
-  position: absolute;
-  bottom: 15px;
+  width: 100%;
+  text-align: center;
   @include mobile {
     font-size: 0.5rem;
   }
