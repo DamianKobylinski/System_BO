@@ -77,11 +77,13 @@
       <div class="register-info-wrapper">
         <div class="register-info">
           <h1>
-            Zainteresowany?<br>
+            <div>
+              Zainteresowany?
+              <div class="circle"/>
+            </div> <br>
             Poznaj nasz projekt.
             Dokonaj rejestracji.
             Wypełnij formularz otrzymasz więcej informacji.
-            <div class="circle"/>
           </h1>
         </div>
         <InitialForm/>
@@ -233,14 +235,21 @@ body {
     }
 
     .woman {
-      width: 400px;
-      height: 500px;
+      width: 500px;
+      height: 600px;
       position: absolute;
       bottom: -30px;
       right: 50px;
       z-index: 2;
       object-fit: cover;
-      @include large-tablet {
+      @media screen and (max-width: 1426px) {
+        display: none;
+      }
+      @media screen and (max-height: 773px) {
+        width: 400px;
+        height: 500px;
+      }
+      @media screen and (max-height: 773px) {
         display: none;
       }
     }
@@ -363,6 +372,7 @@ body {
         padding: 2vh 0 8vh 0;
         color: #000;
         h1 {
+          position: relative;
           z-index: 10;
           font-weight: 400;
           font-size: 28px;
@@ -376,24 +386,24 @@ body {
           @include mobile {
             font-size: 19px;
           }
-          .circle {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            background-color: $red;
-            position: absolute;
-            z-index: -1;
-            left: 30%;
-            top: -15px;
-            @include tablet {
-              width: 100px;
-              height: 100px;
-            }
-            @include mobile {
-              width: 70px;
-              height: 70px;
-              top: 0;
-              left: 20%;
+          div {
+            position: relative;
+            display: inline-block;
+            .circle {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              background-color: $red;
+              position: absolute;
+              z-index: -1;
+              top: -10px;
+              left: -15px;
+              @include mobile {
+                width: 30px;
+                height: 30px;
+                top: -4px;
+                left: -10px;
+              }
             }
           }
         }

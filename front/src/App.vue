@@ -8,26 +8,7 @@
 
 <script>
 export default {
-  mounted() {
-    document.onreadystatechange = () => {
-      if (document.readyState === 'complete') {
-        if (this.$cookies.isKey('email')) {
-          if (this.$cookies.isKey('name')) {
-            this.$store.state.isInDatabase = true;
-          }
-        }
-      }
-    };
-  },
-  updated() {
-    if (this.$cookies.isKey('email') === true) {
-      if (this.$cookies.isKey('name') === true) {
-        this.$store.state.isInDatabase = true;
-      } else {
-        this.$store.state.isInDatabase = false;
-      }
-    }
-  },
+  name: 'app',
 };
 </script>
 
