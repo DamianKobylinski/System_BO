@@ -175,7 +175,7 @@ body {
       font-size: 50px;
       margin-left: 5%;
       margin-bottom: 1vh;
-      font-weight: 400;
+      font-weight: 500;
       z-index: 10;
       span {
         color: $red;
@@ -359,7 +359,6 @@ body {
       height: auto;
       color: white;
       font-weight: 200;
-      font-style: italic;
       padding: 5vh 0;
 
       .register-info {
