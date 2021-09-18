@@ -30,7 +30,11 @@
       <h2>Perspektywa</h2>
       <h2>Gratyfikacja</h2>
       <div class="circle">
-        <p>Dołącz<br /> do Nas !</p>
+        <div class="circle_text">
+          <p class="circle_first_half">Dołącz</p>
+          <p class="circle_second_half">do Nas</p>
+        </div>
+        <p class="circle_sign">!</p>
       </div>
       <img
         class="woman"
@@ -237,6 +241,7 @@ body {
       }
     }
     .circle {
+      display: flex;
       width: 300px;
       height: 300px;
       border-radius: 50%;
@@ -264,18 +269,47 @@ body {
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         color: #fff;
         line-height: 80px;
         transform: rotateZ(-20deg);
         text-align: center;
         @include tablet{
-          font-size: 2.5rem;
+          font-size: 2rem;
           line-height: 50px;
         }
         @include mobile{
           font-size: 1.8rem;
           line-height: 50px;
+        }
+      }
+      & .circle_text{
+        position: absolute;
+        height: 20%;
+        top: 30%;
+        right: 20%;
+        & .circle_first_half{
+          position: relative;
+          right: 50%;
+          transform: rotateZ(-10deg);
+        }
+        & .circle_second_half{
+          position: relative;
+          right: 40%;
+          transform: rotateZ(-5deg);
+        }
+      }
+      & .circle_sign {
+        position: absolute;
+        right: 15%;
+        top: -5%;
+        transform: rotateZ(-5deg);
+        font-size: 15rem;
+        @include tablet{
+          font-size: 12rem;
+        }
+        @include mobile{
+          font-size: 10rem;
         }
       }
     }
