@@ -1,14 +1,34 @@
 <template>
-  <router-view v-slot="{ Component }">
-    <transition name="fade" mode="out-in">
-      <component :is="Component" />
-    </transition>
-</router-view>
+  <div class="app">
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <LoadingScreen v-if="isLoading" />
+        <component v-else :is="Component" />
+      </transition>
+    </router-view>
+  </div>
 </template>
 
 <script>
+import LoadingScreen from './components/LoadingScreen.vue';
+
 export default {
   name: 'app',
+  data() {
+    return {
+      isLoading: true,
+    };
+  },
+  mounted() {
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        this.isLoading = false;
+      }
+    };
+  },
+  components: {
+    LoadingScreen,
+  },
 };
 </script>
 
