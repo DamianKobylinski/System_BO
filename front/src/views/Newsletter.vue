@@ -312,23 +312,60 @@ body {
           font-size: 10rem;
         }
       }
+      @media screen and (max-height: 773px) {
+        top: 30%;
+        left: 45%;
+      }
+      @media screen and (max-height: 500px) {
+        width: 150px;
+        height: 150px;
+        & p {
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          font-size: 1.3rem;
+          color: #fff;
+          line-height: 80px;
+          transform: rotateZ(-20deg);
+          text-align: center;
+          @include tablet{
+            font-size: 1.3rem;
+            line-height: 50px;
+          }
+          @include mobile{
+            font-size: 1.3rem;
+            line-height: 50px;
+          }
+        }
+        & .circle_sign {
+          position: absolute;
+          right: 15%;
+          top: -5%;
+          transform: rotateZ(-5deg);
+          font-size: 8rem;
+          @include tablet{
+            font-size: 8rem;
+          }
+          @include mobile{
+            font-size: 8rem;
+          }
+        }
+      }
     }
     .woman {
-      width: 500px;
-      height: 600px;
+      width: 400px;
+      height: 500px;
       position: absolute;
       bottom: -30px;
       right: 50px;
       z-index: 2;
       object-fit: cover;
-      @media screen and (max-width: 1426px) {
+      @media screen and (max-width: 1210px) {
         display: none;
       }
-      @media screen and (max-height: 773px) {
-        width: 400px;
-        height: 500px;
-      }
-      @media screen and (max-height: 773px) {
+      @media screen and (max-height: 700px) {
         display: none;
       }
     }
