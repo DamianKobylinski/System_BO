@@ -316,13 +316,13 @@ export default {
       font-size: 4rem;
       color: $red;
       @include tablet {
-        font-size: 3.5rem;
+        font-size: 3rem;
       }
       @include mobile {
         font-size: 2rem;
       }
       @media screen and (max-height: 360px) {
-        font-size: 2.1rem;
+        font-size: 2rem;
       }
     }
     p {
@@ -331,25 +331,25 @@ export default {
       margin-top: 20px;
       font-weight: 400;
       @include tablet {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
       @include mobile {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
     }
     h2 {
-      font-size: 2.4rem;
+      font-size: 1.1rem;
       margin-top: 30px;
       padding: 0 5px;
       font-weight: 400;
       @include tablet {
-        font-size: 2rem;
+        font-size: 1.1rem;
       }
       @include mobile {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
       }
       @media screen and (max-height: 360px) {
-        font-size: 1.8rem;
+        font-size: 1.1rem;
         padding-bottom: 30px;
       }
     }
@@ -372,11 +372,11 @@ export default {
     flex-direction: column;
     text-align: center;
     h1 {
-      font-size: 2.7rem;
+      font-size: 2rem;
       padding: 100px 0 20px 0;
       font-weight: 600;
       @include tablet {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
       @include mobile {
         font-size: 2rem;
@@ -386,33 +386,33 @@ export default {
       }
     }
     .short-info {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 400;
       width: 50%;
       margin-top: 50px;
       @include tablet {
         width: 90%;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
       @include mobile {
         width: 90%;
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
     }
     .long-info {
       font-weight: 400;
-      font-size: 1rem;
+      font-size: 1.1rem;
       margin-top: 70px;
       margin-bottom: 100px;
       width: 60%;
       @include tablet {
         width: 90%;
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-top: 50px;
       }
       @include mobile {
         width: 90%;
-        font-size: 0.95rem;
+        font-size: 1.1rem;
       }
     }
   }
@@ -428,7 +428,7 @@ export default {
   padding: 50px 0;
   h1 {
     text-align: center;
-    font-size: 2.3rem;
+    font-size: 2rem;
     letter-spacing: .8px;
     word-spacing: 2px;
     @include mobile {
@@ -481,11 +481,11 @@ export default {
   padding: 0 0 50px 0;
   h1 {
     font-weight: 600;
-    font-size: 2.2rem;
+    font-size: 2rem;
     padding: 50px 0;
     width: 80%;
     @include tablet {
-      font-size: 1.9rem;
+      font-size: 2rem;
     }
     @include mobile {
       font-size: 1.5rem;
@@ -521,11 +521,11 @@ export default {
     margin-bottom: 70px;
     font-weight: 600;
     @include mobile {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 80px;
     padding: 0 30px;
@@ -535,7 +535,7 @@ export default {
 
   }
   p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
     padding: 0 20vw;
     margin-bottom: 40px;
@@ -575,7 +575,7 @@ export default {
   }
   .catch-someone-attention {
     p {
-      font-size: 3.5rem;
+      font-size: 4rem;
       line-height: 50px;
       @media screen and (max-width: 1200px) {
         font-size: 2rem;
@@ -594,14 +594,14 @@ export default {
         top: 30px;
         font-size: 5rem;
         @media screen and (max-width: 1200px) {
-          font-size: 2.5rem;
+          font-size: 3rem;
           top: 20px;
         }
         @media screen and (max-width: 600px) {
           font-size: 3.5rem;
         }
         @media screen and (max-width: 520px) {
-          font-size: 2.5rem;
+          font-size: 3rem;
           top: 10px;
         }
       }

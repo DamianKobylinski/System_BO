@@ -29,6 +29,9 @@
       <h2>Kooperacja</h2>
       <h2>Perspektywa</h2>
       <h2>Gratyfikacja</h2>
+      <div class="circle">
+        <p>Dołącz<br /> do Nas !</p>
+      </div>
       <img
         class="woman"
         src="@/assets/img/woman.webp"
@@ -233,7 +236,49 @@ body {
         height: 90px;
       }
     }
-
+    .circle {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #ee1a0a;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 45%;
+      border: 5px solid #fff;
+      @include tablet {
+        width: 250px;
+        height: 250px;
+        top: 50%;
+        left: 45%;
+      }
+      @include mobile {
+        width: 200px;
+        height: 200px;
+        top: 55%;
+        left: 40%;
+      }
+      & p {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 3.5rem;
+        color: #fff;
+        line-height: 80px;
+        transform: rotateZ(-20deg);
+        text-align: center;
+        @include tablet{
+          font-size: 2.5rem;
+          line-height: 50px;
+        }
+        @include mobile{
+          font-size: 1.8rem;
+          line-height: 50px;
+        }
+      }
+    }
     .woman {
       width: 500px;
       height: 600px;
@@ -389,19 +434,19 @@ body {
             position: relative;
             display: inline-block;
             .circle {
-              width: 50px;
-              height: 50px;
+              width: 75px;
+              height: 75px;
               border-radius: 50%;
               background-color: $red;
               position: absolute;
               z-index: -1;
-              top: -10px;
-              left: -15px;
+              top: -25px;
+              left: -30px;
               @include mobile {
-                width: 30px;
-                height: 30px;
-                top: -4px;
-                left: -10px;
+                width: 50px;
+                height: 50px;
+                top: -18px;
+                left: -20px;
               }
             }
           }
