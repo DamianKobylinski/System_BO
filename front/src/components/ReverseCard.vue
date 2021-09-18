@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 .reverse-card-wrapper {
-    width: 180px;
+    width: 200px;
     height: 230px;
     background-color: #252525;
     box-shadow: 0px 6px 8px 5px rgba(0, 0, 0, 0.25);
@@ -73,11 +73,11 @@ export default {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 .icon {
-                    font-size: 40px;
+                    font-size: 38px;
                     margin-bottom: 20px;
                 }
                 p {
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                 }
             }
         }
@@ -91,7 +91,7 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 13px;
+            font-size: 11px;
             transform: rotateY(180deg);
             p {
                 font-weight: 400;

@@ -2,7 +2,7 @@ import { createStore } from 'vuex';
 
 export default createStore({
   state: {
-    isInDatabase: false,
+    isInDatabase: true,
     isAdminSuccessLogin: false,
     isFormSent: false,
   },

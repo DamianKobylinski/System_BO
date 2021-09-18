@@ -258,7 +258,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.main-form-wrapper {
+  font-family: 'Ubuntu', sans-serif;
+  overflow-y: hidden;
+}
 #welcome-section {
   height: 70vh;
   @media screen and (max-height: 360px) {
@@ -372,47 +375,47 @@ export default {
     flex-direction: column;
     text-align: center;
     h1 {
-      font-size: 2rem;
+      font-size: 28px;
       padding: 100px 0 20px 0;
       font-weight: 600;
       @include tablet {
-        font-size: 2rem;
+        font-size: 20px;
       }
       @include mobile {
-        font-size: 2rem;
+        font-size: 18px;
       }
       span {
         color: $red;
       }
     }
     .short-info {
-      font-size: 1.1rem;
+      font-size: 19px;
       font-weight: 400;
       width: 50%;
       margin-top: 50px;
       @include tablet {
         width: 90%;
-        font-size: 1.1rem;
+        font-size: 17px;
       }
       @include mobile {
         width: 90%;
-        font-size: 1.1rem;
+        font-size: 15px;
       }
     }
     .long-info {
       font-weight: 400;
-      font-size: 1.1rem;
+      font-size: 19px;
       margin-top: 70px;
       margin-bottom: 100px;
       width: 60%;
       @include tablet {
         width: 90%;
-        font-size: 1.1rem;
+        font-size: 17px;
         margin-top: 50px;
       }
       @include mobile {
         width: 90%;
-        font-size: 1.1rem;
+        font-size: 15px;
       }
     }
   }
@@ -428,7 +431,7 @@ export default {
   padding: 50px 0;
   h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 28px;
     letter-spacing: .8px;
     word-spacing: 2px;
     @include mobile {
@@ -468,7 +471,7 @@ export default {
   }
 }
 #short-answers-section {
-  padding: 0 0 90px 0;
+  padding: 0 0 100px 0;
 }
 
 #benefits-section {
@@ -481,14 +484,14 @@ export default {
   padding: 0 0 50px 0;
   h1 {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 28px;
     padding: 50px 0;
     width: 80%;
     @include tablet {
-      font-size: 2rem;
+      font-size: 25px;
     }
     @include mobile {
-      font-size: 1.5rem;
+      font-size: 22px;
     }
     span {
       color: $red;
@@ -516,31 +519,31 @@ export default {
   flex-direction: column;
   text-align: center;
   h1 {
-    font-size: 3rem;
+    font-size: 28px;
     color: $red;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     font-weight: 600;
     @include mobile {
-      font-size: 3rem;
+      font-size: 28px;
     }
   }
   h2 {
-    font-size: 1.1rem;
+    font-size: 22px;
     font-weight: 500;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     padding: 0 30px;
     @include mobile {
-      font-size: 1.1rem;
+      font-size: 22px;
     }
 
   }
   p {
-    font-size: 1.1rem;
+    font-size: 17px;
     font-weight: 400;
     padding: 0 20vw;
     margin-bottom: 40px;
     @include mobile {
-      font-size: 0.85rem;
+      font-size: 14px;
       padding: 0 20px;
     }
   }
