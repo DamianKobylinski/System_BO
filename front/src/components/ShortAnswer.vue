@@ -34,13 +34,13 @@ export default {
   text-align: center;
   flex-direction: column;
   color:#000;
-  margin-top: 150px;
+  margin-top: 110px;
   .icon {
     color: $red;
-    font-size: 50px;
+    font-size: 28px;
   }
   h1 {
-    font-size: 1.8rem;
+    font-size: 28px;
     margin-top: 30px;
     font-weight: 600;
     padding: 0 10px;

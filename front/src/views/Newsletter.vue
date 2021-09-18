@@ -313,8 +313,8 @@ body {
         }
       }
       @media screen and (max-height: 773px) {
-        top: 30%;
-        left: 45%;
+        top: 43%;
+        left: 40%;
       }
       @media screen and (max-height: 500px) {
         width: 150px;
@@ -491,8 +491,9 @@ body {
           z-index: 10;
           font-weight: 400;
           font-size: 28px;
+          line-height: 37px;
           text-align: center;
-          width: 70%;
+          width: 80%;
           word-spacing: 2px;
           position: relative;
           @include tablet {
@@ -500,23 +501,24 @@ body {
           }
           @include mobile {
             font-size: 19px;
+            line-height: 28px;
           }
           div {
             position: relative;
             display: inline-block;
             .circle {
-              width: 75px;
-              height: 75px;
+              width: 60px;
+              height: 60px;
               border-radius: 50%;
               background-color: $red;
               position: absolute;
               z-index: -1;
-              top: -25px;
+              top: -15px;
               left: -30px;
               @include mobile {
-                width: 50px;
-                height: 50px;
-                top: -18px;
+                width: 45px;
+                height: 45px;
+                top: -9px;
                 left: -20px;
               }
             }

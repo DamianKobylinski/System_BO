@@ -51,6 +51,7 @@
         name="checkRODO"
         value="rodo"
         v-model="rodoCheck"
+        required
       />
       <p>
         Wyrażam zgodę na przesyłanie informacji handlowych za pomocą środków komunikacji elektronicznej w rozumieniu

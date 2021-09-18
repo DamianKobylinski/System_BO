@@ -34,19 +34,19 @@ export default {
     flex-direction: row;
     text-align: left;
     @include tablet {
-      margin-bottom: 100px;
+      margin-bottom: 50px;
     }
     @include mobile {
-      margin-bottom: 120px;
+      margin-bottom: 70px;
     }
     .icon-wrapper {
       position: relative;
       padding: 40px 50px;
       .idea-icon {
         color: white;
-        font-size: 60px;
+        font-size: 40px;
         @include mobile {
-          font-size: 40px;
+          font-size: 38px;
         }
       }
       &::after {
@@ -67,9 +67,10 @@ export default {
       font-size: 1rem;
       @include tablet {
         width: 80%;
+        font-size: .9rem;
       }
       @include mobile {
-        font-size: .95rem;
+        font-size: .8rem;
         width: 100%;
       }
     }
