@@ -43,4 +43,10 @@ export default {
 .fade-enter-from, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+body {
+  overflow-x: hidden;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
 </style>
