@@ -163,12 +163,8 @@ export default {
 <style lang="scss" scoped>
 .form-wrapper {
   width: 70%;
-  background-color: white;
-  box-shadow: 0px 0px 61px 23px rgba(0, 0, 0, 0.5);
-  border-radius: 120px;
   margin: 0 auto;
-  transform: translateY(-30px);
-  padding: 80px 0;
+  padding: 50px 0;
   transition: 0.5s ease all;
   @include tablet {
     width: 95%;
@@ -203,9 +199,9 @@ export default {
 
       h1 {
         font-weight: 600;
-        font-size: 1.8rem;
+        font-size: 28px;
         @include mobile {
-          font-size: 1.5rem;
+          font-size: 20px;
         }
 
         span {

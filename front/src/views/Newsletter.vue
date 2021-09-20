@@ -140,12 +140,6 @@ export default {
   box-sizing: border-box;
 }
 
-body {
-  overflow-x: hidden;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 400;
-}
-
 /* App */
 #newsletter-wrapper {
   // Landing Section
@@ -248,9 +242,9 @@ body {
       background-color: #ee1a0a;
       position: absolute;
       z-index: 2;
-      top: 50%;
+      top: 48%;
       left: 45%;
-      border: 5px solid #fff;
+      box-shadow: 11px 20px 13px 7px rgba(0, 0, 0, 0.5);
       @include tablet {
         width: 250px;
         height: 250px;
@@ -266,13 +260,13 @@ body {
       & p {
         display: flex;
         height: 100%;
+        font-weight: bold;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
         font-size: 2.5rem;
         color: #fff;
         line-height: 80px;
-        transform: rotateZ(-20deg);
         text-align: center;
         @include tablet{
           font-size: 2rem;
@@ -291,25 +285,22 @@ body {
         & .circle_first_half{
           position: relative;
           right: 50%;
-          transform: rotateZ(-10deg);
         }
         & .circle_second_half{
           position: relative;
           right: 40%;
-          transform: rotateZ(-5deg);
         }
       }
       & .circle_sign {
         position: absolute;
         right: 15%;
         top: -5%;
-        transform: rotateZ(-5deg);
-        font-size: 15rem;
+        font-size: 13rem;
         @include tablet{
           font-size: 12rem;
         }
         @include mobile{
-          font-size: 10rem;
+          font-size: 9rem;
         }
       }
       @media screen and (max-height: 773px) {
@@ -328,7 +319,6 @@ body {
           font-size: 1.3rem;
           color: #fff;
           line-height: 80px;
-          transform: rotateZ(-20deg);
           text-align: center;
           @include tablet{
             font-size: 1.3rem;
@@ -343,7 +333,6 @@ body {
           position: absolute;
           right: 15%;
           top: -5%;
-          transform: rotateZ(-5deg);
           font-size: 8rem;
           @include tablet{
             font-size: 8rem;
@@ -362,7 +351,7 @@ body {
       right: 50px;
       z-index: 2;
       object-fit: cover;
-      @media screen and (max-width: 1210px) {
+      @media screen and (max-width: 1240px) {
         display: none;
       }
       @media screen and (max-height: 700px) {

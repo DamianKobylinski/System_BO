@@ -329,19 +329,16 @@ export default {
       }
     }
     p {
-      font-size: 1.1rem;
+      font-size: 20px;
       padding: 0 10%;
       margin-top: 20px;
       font-weight: 400;
       @include tablet {
         font-size: 1.1rem;
       }
-      @include mobile {
-        font-size: 1.1rem;
-      }
     }
     h2 {
-      font-size: 1.1rem;
+      font-size: 20px;
       margin-top: 30px;
       padding: 0 5px;
       font-weight: 400;
@@ -549,7 +546,7 @@ export default {
   }
 }
 #between-section {
-  padding: 50px 0 110px 0;
+  padding: 50px 0 70px 0;
   background-color: $bg-black;
   color: white;
   font-weight: 600;
@@ -573,56 +570,58 @@ export default {
         width: 200px;
         height: 200px;
         top: -100px;
-        left: -100px;
+        left: -120px;
       }
   }
   .catch-someone-attention {
     p {
-      font-size: 4rem;
-      line-height: 50px;
+      font-size: 2.5rem;
+      line-height: 30px;
       @media screen and (max-width: 1200px) {
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 20px;
       }
       @media screen and (max-width: 600px) {
-        font-size: 3rem;
-        line-height: 30px;
+        font-size: 1.6rem;
+        line-height: 20px;
       }
       @media screen and (max-width: 520px) {
-        font-size: 2rem;
+        font-size: 1.2rem;
       }
       .you {
         color: $red;
         position: relative;
-        top: 30px;
-        font-size: 5rem;
+        top: 20px;
+        font-size: 3rem;
         @media screen and (max-width: 1200px) {
-          font-size: 3rem;
-          top: 20px;
+          font-size: 2.5rem;
+          top: 15px;
         }
         @media screen and (max-width: 600px) {
-          font-size: 3.5rem;
+          font-size: 2.4rem;
+          top: 10px;
         }
         @media screen and (max-width: 520px) {
-          font-size: 3rem;
+          font-size: 2rem;
           top: 10px;
         }
       }
       .question-mark {
-        font-size: 7rem;
+        font-size: 4rem;
         position: relative;
-        top: 50px;
+        top: 30px;
         padding: 0 10px;
         @media screen and (max-width: 1200px) {
           font-size: 3.5rem;
           top: 30px;
         }
         @media screen and (max-width: 600px) {
-          font-size: 5rem;
+          font-size: 3.2rem;
+          top: 20px;
         }
         @media screen and (max-width: 520px) {
-          font-size: 3rem;
-          top: 20px;
+          font-size: 2.5rem;
+          top: 10px;
         }
       }
     }
