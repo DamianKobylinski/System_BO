@@ -106,13 +106,13 @@ router.post("/", (req, res) => {
     emailOfNewEngaged = req.body.email;
     res.cookie("email", req.body.email, {
         maxAge: 24 * 60 * 60,
-        secure: true,
+        secure: false,
         saveUninitialized: true,
         resave: true,
     })
     res.cookie("name", req.body.name, {
         maxAge: 24 * 60 * 60,
-        secure: true,
+        secure: false,
         saveUninitialized: true,
         resave: true,
     })

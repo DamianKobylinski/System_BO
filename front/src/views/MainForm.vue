@@ -264,7 +264,7 @@ export default {
 }
 #welcome-section {
   height: 70vh;
-  @media screen and (max-height: 360px) {
+  @media screen and (max-height: 600px) {
     height: auto;
   }
   .circle {

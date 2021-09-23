@@ -242,7 +242,7 @@ export default {
       background-color: #ee1a0a;
       position: absolute;
       z-index: 2;
-      top: 48%;
+      top: 45%;
       left: 45%;
       box-shadow: 11px 20px 13px 7px rgba(0, 0, 0, 0.5);
       @include tablet {
